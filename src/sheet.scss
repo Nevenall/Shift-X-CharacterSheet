@@ -1,0 +1,22 @@
+@import 'fonts/fonts.css';
+
+$primary-color: #0a1c20;
+$secondary-color: #d01e00;
+$background-color: #ffffff;
+
+body {
+   font-family: "Branding";
+   font-weight: 500;
+   font-feature-settings: "onum"on;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Bigtime";
+   font-weight: normal;
+   color: $secondary-color;
+}
