@@ -4,19 +4,79 @@ $primary-color: #0a1c20;
 $secondary-color: #d01e00;
 $background-color: #ffffff;
 
-body {
+.root {
+   min-width: 800px;
+
+   display: grid;
+   grid-template-columns: 25% auto 25%;
+   grid-template-rows: auto;
+
+
+   font-size: .875em;
    font-family: "Branding";
    font-weight: 500;
    font-feature-settings: "onum"on;
-}
+   color: $primary-color;
+   background-color: $background-color;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: "Bigtime";
-   font-weight: normal;
-   color: $secondary-color;
+   p {
+      line-height: 1.45;
+   }
+
+   .left-column {
+      border: 1px solid #0a1c20;
+   }
+
+   .middle-column {
+      border: 1px solid #0a1c20;
+   }
+
+   .right-column {
+      border: 1px solid #0a1c20;
+   }
+
+   small,
+   .font-small {
+      font-weight: 400;
+      font-size: 0.8em;
+
+   }
+
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      font-family: "Bigtime";
+      font-weight: normal;
+      color: $secondary-color;
+      margin: 0;
+   }
+
+   h1 {
+      font-size: 3.051em;
+   }
+
+   h2 {
+      font-size: 2.441em;
+   }
+
+   h3 {
+      font-size: 1.953em;
+   }
+
+   h4 {
+      font-size: 1.563em;
+   }
+
+   h5 {
+      font-size: 1.25em;
+   }
+
+   h6 {
+      font-size: 1em;
+   }
+
 }
