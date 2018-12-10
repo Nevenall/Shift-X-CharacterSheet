@@ -3,6 +3,7 @@ var sass = require('node-sass')
 var handlebars = require('handlebars')
 var glob = require('glob')
 
+fs.mkdir('dist', err => {})
 
 sass.render({
    file: 'src/sheet.scss'
@@ -15,6 +16,7 @@ sass.render({
 });
 
 fs.copyFile('src/index.html', 'dist/index.html', err => {})
+fs.copyFile('src/sheet-worker.js', 'dist/sheet-worker.js', err => {})
 
 
 glob("src/fonts/**", (err, files) => {
