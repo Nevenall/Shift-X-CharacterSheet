@@ -57,12 +57,16 @@ $background-color: #ffffff;
 
    }
 
+   label {
+      // display: block;
+   }
 
-  input{
-   background: transparent;
-   border: none;
-   border-bottom: 1px solid #000000;
-  }
+   input {
+      // display: block;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #000000;
+   }
 
    h1,
    h2,
