@@ -1,19 +1,5 @@
 @import 'fonts/fonts.css';
 
-// a random number generated when the css file is written, 
-// this doesn't work for roll20 character sheets,
-// but we could possibly use https://css-tricks.com/random-numbers-css/ the techniques here
-// and generate a random number for charactersheet ids. 
-
-// consider maybe using bulma.
-// it's css only, sass particularly
-// and it might be a good starting point for a framework, 
-// could even do tabs in css only. 
-
-// 
-
-
-$id-prefix: random();
 
 $primary-color: #0a1c20;
 $secondary-color: #d01e00;
@@ -22,10 +8,9 @@ $background-color: #ffffff;
 .root {
    min-width: 800px;
 
-   display: grid;
-   grid-template-columns: 25% auto 25%;
-   grid-template-rows: auto;
+   display: flex;
 
+   flex-basis: content;
 
    font-size: .875em;
    font-family: "Branding";
@@ -55,6 +40,14 @@ $background-color: #ffffff;
       font-weight: 400;
       font-size: 0.8em;
 
+   }
+
+
+   .hero-details {
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-basis: content;
+      justify-content: space-between;
    }
 
    label {
