@@ -19,9 +19,7 @@ $background-color: #ffffff;
    color: $primary-color;
    background-color: $background-color;
 
-   p {
-      line-height: 1.45;
-   }
+
 
    .left-column {
       border: 1px solid #0a1c20;
@@ -39,7 +37,6 @@ $background-color: #ffffff;
    .font-small {
       font-weight: 400;
       font-size: 0.8em;
-
    }
 
 
@@ -50,15 +47,31 @@ $background-color: #ffffff;
       justify-content: space-between;
    }
 
-   label {
-      // display: block;
+   .field {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 150px;
+   }
+
+
+   .help {
+      font-weight: 400;
+      font-size: 0.8em;
+   }
+
+   p {
+      line-height: 1.45;
    }
 
    input {
-      // display: block;
       background: transparent;
       border: none;
       border-bottom: 1px solid #000000;
+   }
+
+   label {
+      font-weight: bold;
    }
 
    h1,
