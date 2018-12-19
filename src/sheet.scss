@@ -6,11 +6,10 @@ $secondary-color: #d01e00;
 $background-color: #ffffff;
 
 .root {
-   min-width: 800px;
+   min-width: 900px;
 
    display: flex;
-
-   flex-basis: content;
+   flex-basis: auto;
 
    font-size: .875em;
    font-family: "Branding";
@@ -21,17 +20,11 @@ $background-color: #ffffff;
 
 
 
-   .left-column {
+   .column {
       border: 1px solid #0a1c20;
    }
 
-   .middle-column {
-      border: 1px solid #0a1c20;
-   }
 
-   .right-column {
-      border: 1px solid #0a1c20;
-   }
 
    small,
    .font-small {
@@ -41,17 +34,18 @@ $background-color: #ffffff;
 
 
    .hero-details {
-      display: inline-flex;
+      display: flex;
       flex-wrap: wrap;
       flex-basis: content;
       justify-content: space-between;
+
    }
 
    .field {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      width: 150px;
+      flex-basis: 150px;
    }
 
 
@@ -65,6 +59,13 @@ $background-color: #ffffff;
    }
 
    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #000000;
+   }
+
+
+   textarea {
       background: transparent;
       border: none;
       border-bottom: 1px solid #000000;
