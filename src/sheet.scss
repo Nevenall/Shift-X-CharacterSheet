@@ -6,11 +6,8 @@ $secondary-color: #d01e00;
 $background-color: #ffffff;
 
 .root {
+
    min-width: 900px;
-
-   display: flex;
-   flex-basis: auto;
-
    font-size: .875em;
    font-family: "Branding";
    font-weight: 500;
@@ -19,10 +16,18 @@ $background-color: #ffffff;
    background-color: $background-color;
 
 
+   .columns {
 
-   .column {
-      border: 1px solid #0a1c20;
+      display: flex;
+      flex-basis: auto;
    }
+
+
+
+
+   // .column {
+   //    border: 1px solid #0a1c20;
+   // }
 
 
 
@@ -39,14 +44,16 @@ $background-color: #ffffff;
       flex-basis: content;
       justify-content: space-between;
 
+      .field {
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         flex-basis: 150px;
+      }
+
    }
 
-   .field {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      flex-basis: 150px;
-   }
+
 
 
    .help {
@@ -89,6 +96,7 @@ $background-color: #ffffff;
 
    h1 {
       font-size: 3.051em;
+
    }
 
    h2 {
