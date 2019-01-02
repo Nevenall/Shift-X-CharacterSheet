@@ -10,71 +10,73 @@
 </head>
 
 <body>
+   <!-- the root of the the sheet -->
    <div class="charsheet">
-      <!-- the root of the the sheet -->
-      <div class="root">
-         <h1>Shift-X</h1>
-         <div class="columns">
-            <div class="column">
-               <div class="hero-details">
-                  <div class="field">
-                     <input class="big-time" type="text" placeholder="Hero Name" />
-                  </div>
-                  <div class="field">
-                     <label>Team</label>
-                     <input type="text" />
-                  </div>
-                  <div class="field">
-                     <label>Background</label>
-                     <input type="text" />
-                     <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
-                  </div>
-                  <div class="field">
-                     <label>Origin</label>
-                     <input type="text" />
-                     <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
-                  </div>
-                  <div class="field">
-                     <label>Nemesis</label>
-                     <input type="text" />
-                     <span class="help">The iconic villain of your solo comics.</span>
-                  </div>
+      <h1>Shift-X</h1>
+      <div class="columns">
+         <div class="column">
+            <div class="hero-details">
+               <div class="field">
+                  <input spellcheck="false" class="big-time" type="text" placeholder="Hero Name" />
+               </div>
+               <div class="field">
+                  <label>Team</label>
+                  <input type="text" spellcheck="false" />
+               </div>
+               <div class="field">
+                  <label>Background</label>
+                  <input type="text" />
+                  <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
+               </div>
+               <div class="field">
+                  <label>Origin</label>
+                  <input type="text" />
+                  <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
+               </div>
+               <div class="field">
+                  <label>Nemesis</label>
+                  <input type="text" spellcheck="false" />
+                  <span class="help">The iconic villain of your solo comics.</span>
+               </div>
 
-                  <!-- there is probably room here for notes or gear or something. -->
-               </div>
-               <div class="gear">
-                  <h3>Gear</h3>
-               </div>
+               <!-- there is probably room here for notes or gear or something. -->
             </div>
-            <div class="column">
-               <div class="powers">
-                  <div class="powerset">
-                     <div class="field">
-                        <input class="big-time" type="text" placeholder="Powerset" />
-                     </div>
+            <div class="gear">
+               <h3>Gear</h3>
+            </div>
+         </div>
+         <div class="column">
+            <div class="powersets">
+
+               <div class="powerset">
+                  <div class="field">
+                     <input spellcheck="false" class="big-time" type="text" placeholder="Powerset" />
+                     need a place for threat number
+                     <textarea placeholder="narrative description of the power"></textarea>
                   </div>
-
-
-
-
-                  <h3>Powers</h3>
-                  <h3>Extras</h3>
-                  <h3>Limits</h3>
-
+                  <div class="powers"></div>
+                  <div class="field">
+                     powers
+                  </div>
+                  <div class="field">
+                     limits
+                  </div>
                </div>
 
-               <div class="abilities">
-                  <h2>Abilities</h2>
-               </div>
+
+
 
             </div>
-            <div class="column">
-               <h2>Actions</h2>
-               <h2>Stress & Trauma</h2>
-               <h2>Harm & Healing Clock</h2>
+
+            <div class="abilities">
+
             </div>
 
          </div>
+         <div class="column">
+
+         </div>
+
       </div>
    </div>
 </body>
