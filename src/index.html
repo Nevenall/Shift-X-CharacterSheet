@@ -12,30 +12,33 @@
 <body>
    <!-- the root of the the sheet -->
    <div class="charsheet">
-      <h1>Shift-X</h1>
+
+      <div class="field-wrapper character-name">
+         <input spellcheck="false" class="big-time" type="text" name="attr_character_name" placeholder="Hero Name" />
+      </div>
+
       <div class="columns">
          <div class="column">
+
             <div class="hero-details">
-               <div class="field">
-                  <input spellcheck="false" class="big-time" type="text" placeholder="Hero Name" />
-               </div>
-               <div class="field">
+
+               <div class="field-wrapper">
                   <label>Team</label>
-                  <input type="text" spellcheck="false" />
+                  <input type="text" spellcheck="false" name="attr_TeamName" />
                </div>
-               <div class="field">
+               <div class="field-wrapper">
                   <label>Background</label>
-                  <input type="text" />
+                  <input type="text" name="attr_Background" />
                   <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
                </div>
-               <div class="field">
+               <div class="field-wrapper">
                   <label>Origin</label>
-                  <input type="text" />
+                  <input type="text" name="attr_Origin" />
                   <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
                </div>
-               <div class="field">
+               <div class="field-wrapper">
                   <label>Nemesis</label>
-                  <input type="text" spellcheck="false" />
+                  <input type="text" spellcheck="false" name="attr_Nemesis" />
                   <span class="help">The iconic villain of your solo comics.</span>
                </div>
 
@@ -48,17 +51,19 @@
          <div class="column">
             <div class="powersets">
 
+               <!--todo - make powersets a repeating section -->
+
                <div class="powerset">
-                  <div class="field">
+                  <div class="field-wrapper">
                      <input spellcheck="false" class="big-time" type="text" placeholder="Powerset" />
                      need a place for threat number
                      <textarea placeholder="narrative description of the power"></textarea>
                   </div>
                   <div class="powers"></div>
-                  <div class="field">
+                  <div class="field-wrapper">
                      powers
                   </div>
-                  <div class="field">
+                  <div class="field-wrapper">
                      limits
                   </div>
                </div>
