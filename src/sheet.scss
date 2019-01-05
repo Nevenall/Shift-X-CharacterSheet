@@ -21,16 +21,35 @@ $font-size-small: .8em;
 .charsheet {
 
    min-width: 900px;
+
+
    font-size: $font-size-body;
    font-family: "Branding";
    font-weight: 500;
    font-feature-settings: "onum"on;
-   color: $primary-color;
-   background-color: $background-color;
+
    line-height: 1.45;
 
 
+   color: $primary-color;
+   background-color: $background-color;
+
+
+   display: grid;
+
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas:
+      "header header header"
+      "left middle right";
+
+
+
+
+
    .character-name {
+      grid-area: header;
+
       input {
          font-size: $font-size-h1;
          line-height: 1.25em;
@@ -39,26 +58,21 @@ $font-size-small: .8em;
       }
    }
 
-   .columns {
+   .column {
       display: flex;
-      flex-basis: auto;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
+      flex-direction: column;
    }
 
-   .column-left {
-      flex-grow: 1;
-      flex-basis: 300px;
+   .grid-left {
+      grid-area: left;
    }
 
-   .column-middle {
-      flex-grow: 2;
-      flex-basis: 300px;
+   .grid-middle {
+      grid-area: middle;
    }
 
-   .column-right {
-      flex-grow: 1;
-      flex-basis: 300px;
+   .grid-right {
+      grid-area: right;
    }
 
 
@@ -85,11 +99,7 @@ $font-size-small: .8em;
       font-size: $font-size-small;
    }
 
-
-
-
-
-   .field-wrapper {
+   .field {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -121,7 +131,6 @@ $font-size-small: .8em;
    }
 
    input {
-
       font-size: $font-size-body;
       font-family: "Branding";
       font-weight: 500;
@@ -158,7 +167,7 @@ $font-size-small: .8em;
       font-family: "Bigtime";
       font-weight: normal;
       color: $secondary-color;
-      margin: 0;
+      // margin: 0;
    }
 
    h1 {

@@ -12,81 +12,72 @@
 <body>
    <!-- the root of the the sheet -->
    <div class="charsheet">
-
-      <div class="field-wrapper character-name">
+      <div class="character-name field">
          <input spellcheck="false" class="big-time" type="text" name="attr_character_name" placeholder="Hero Name" />
       </div>
+      <div class="column grid-left">
+         <div class="hero-details">
 
-      <div class="columns">
-
-         <div class="column-left">
-
-            <div class="hero-details">
-
-               <div class="field-wrapper">
-                  <label>Team</label>
-                  <input type="text" spellcheck="false" name="attr_TeamName" />
-               </div>
-               <div class="field-wrapper">
-                  <label>Background</label>
-                  <input type="text" name="attr_Background" />
-                  <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
-               </div>
-               <div class="field-wrapper">
-                  <label>Origin</label>
-                  <input type="text" name="attr_Origin" />
-                  <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
-               </div>
-               <div class="field-wrapper">
-                  <label>Nemesis</label>
-                  <input type="text" spellcheck="false" name="attr_Nemesis" />
-                  <span class="help">The iconic villain of your solo comics.</span>
-               </div>
-
-               <!-- there is probably room here for notes or gear or something. -->
+            <div class="field">
+               <label>Team</label>
+               <input type="text" spellcheck="false" name="attr_TeamName" />
             </div>
-            <div class="gear">
-               <h3>Gear</h3>
+            <div class="field">
+               <label>Background</label>
+               <input type="text" name="attr_Background" />
+               <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
             </div>
+            <div class="field">
+               <label>Origin</label>
+               <input type="text" name="attr_Origin" />
+               <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
+            </div>
+            <div class="field">
+               <label>Nemesis</label>
+               <input type="text" spellcheck="false" name="attr_Nemesis" />
+               <span class="help">The iconic villain of your solo comics.</span>
+            </div>
+
+            <!-- there is probably room here for notes or gear or something. -->
+         </div>
+         <div class="gear">
+            <h3>Gear</h3>
+         </div>
+      </div>
+      <div class="column grid-middle">
+
+         <div class="powersets">
+
+            <!--todo - make powersets a repeating section -->
+
+            <div class="powerset">
+               <div class="field powerset-name">
+                  <input spellcheck="false" class="big-time" type="text" placeholder="Powerset Name" />
+                  <input class="big-time" type="number">
+               </div>
+               <div class="field">
+                  <textarea placeholder="narrative description of the power"></textarea>
+               </div>
+               <div class="powers"></div>
+               <div class="field">
+                  powers
+               </div>
+               <div class="field">
+                  limits
+               </div>
+            </div>
+
+
+
+
          </div>
 
-
-         <div class="column-middle">
-
-            <div class="powersets">
-
-               <!--todo - make powersets a repeating section -->
-
-               <div class="powerset">
-                  <div class="field-wrapper powerset-name">
-                     <input spellcheck="false" class="big-time" type="text" placeholder="Powerset Name" />
-                     <input class="big-time" type="number">
-                  </div>
-                  <div class="field-wrapper">
-                     <textarea placeholder="narrative description of the power"></textarea>
-                  </div>
-                  <div class="powers"></div>
-                  <div class="field-wrapper">
-                     powers
-                  </div>
-                  <div class="field-wrapper">
-                     limits
-                  </div>
-               </div>
-
-
-
-
-            </div>
-
-            <div class="abilities">
-
-            </div>
+         <div class="abilities">
 
          </div>
-         <div class="column-right">
 
-         </div>
+      </div>
+      <div class="column grid-right">
 
       </div>
    </div>
