@@ -18,30 +18,46 @@
       <div class="column grid-left">
          <div class="hero-details">
 
-            <div class="field">
+            <div class="field flex-150">
                <label>Team</label>
                <input type="text" spellcheck="false" name="attr_TeamName" />
             </div>
-            <div class="field">
+            <div class="field flex-150">
                <label>Background</label>
                <input type="text" name="attr_Background" />
                <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
             </div>
-            <div class="field">
+            <div class="field flex-150">
                <label>Origin</label>
                <input type="text" name="attr_Origin" />
                <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
             </div>
-            <div class="field">
+            <div class="field flex-150">
                <label>Nemesis</label>
                <input type="text" spellcheck="false" name="attr_Nemesis" />
                <span class="help">The iconic villain of your solo comics.</span>
             </div>
+            <div class="field flex-300">
+               <label>Look</label>
+               <input type="text" spellcheck="true" name="attr_Look" />
+            </div>
 
-            <!-- there is probably room here for notes or gear or something. -->
+            <!-- there is probachrbly room here for notes or gear or something. -->
          </div>
-         <div class="gear">
-            <h3>Gear</h3>
+
+         <div class="stress">
+            <h3>Stress, Trauma, Healing</h3>
+         </div>
+
+         <div class="relationships">
+            <h3>Relationships</h3>
+
+            <!-- todo - make a png background of the big-time bullet for action and relationship radiobuttons
+         unchecked should be gray, may just need to adjust the color, if we can adjust the color of a png with css.
+         otherwise make the three states, unchecked, unchecked hover, and checked
+         -->
+
+
          </div>
       </div>
       <div class="column grid-middle">
@@ -52,8 +68,8 @@
 
             <div class="powerset">
                <div class="field powerset-name">
-                  <input spellcheck="false" class="big-time" type="text" placeholder="Powerset Name" />
-                  <input class="big-time" type="number">
+                  <inpcut spellcheck="false" class="big-time" type="text" placeholder="Powerset Name" />
+                  </span><input class="big-time" type="number" step="1" title="Threat">
                </div>
                <div class="field">
                   <textarea placeholder="narrative description of the power"></textarea>

@@ -18,6 +18,9 @@ $font-size-body: 1em;
 $font-size-small: .8em;
 
 
+
+
+
 .charsheet {
 
    min-width: 900px;
@@ -29,7 +32,6 @@ $font-size-small: .8em;
    font-feature-settings: "onum"on;
 
    line-height: 1.45;
-
 
    color: $primary-color;
    background-color: $background-color;
@@ -44,6 +46,22 @@ $font-size-small: .8em;
       "left middle right";
 
 
+   .font-branding {
+
+      font-size: $font-size-body;
+      font-family: "Branding";
+      font-weight: 500;
+      font-feature-settings: "onum"on;
+
+   }
+
+
+   .big-time {
+      font-family: "BigTime";
+      font-size: $font-size-h4;
+      color: $secondary-color;
+      line-height: 1.25;
+   }
 
 
 
@@ -85,14 +103,6 @@ $font-size-small: .8em;
    }
 
 
-   .big-time {
-      font-family: "BigTime";
-      font-size: $font-size-h4;
-      color: $secondary-color;
-      line-height: 1.25;
-   }
-
-
    small,
    .font-small {
       font-weight: 400;
@@ -103,16 +113,40 @@ $font-size-small: .8em;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+   }
+
+   .flex-150 {
       flex-basis: 150px;
    }
+
+   .flex-300 {
+      flex-basis: 100%;
+   }
+
+   // todo - a double wide field class
+   //
+
+
+
 
    .powerset-name {
       flex-direction: row;
       flex-wrap: nowrap;
 
       input[type=number] {
+         text-align: center;
          width: 1.5em;
+         -moz-appearance: textfield;
       }
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         appearance: none;
+         margin: 0;
+      }
+
    }
 
    label {
