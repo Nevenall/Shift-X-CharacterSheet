@@ -36,9 +36,7 @@ $font-size-small: .8em;
    color: $primary-color;
    background-color: $background-color;
 
-
    display: grid;
-
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto;
    grid-template-areas:
@@ -47,12 +45,10 @@ $font-size-small: .8em;
 
 
    .font-branding {
-
       font-size: $font-size-body;
       font-family: "Branding";
       font-weight: 500;
       font-feature-settings: "onum"on;
-
    }
 
 
@@ -115,11 +111,11 @@ $font-size-small: .8em;
       flex-wrap: wrap;
    }
 
-   .flex-150 {
-      flex-basis: 150px;
+   .flex-50 {
+      flex-basis: 50%;
    }
 
-   .flex-300 {
+   .flex-100 {
       flex-basis: 100%;
    }
 
