@@ -10,57 +10,52 @@
 </head>
 
 <body>
-   <!-- the root of the the sheet -->
-   <div class="charsheet">
-      <div class="character-name flex-column">
-         <input spellcheck="false" class="font-bigtime" type="text" name="attr_character_name" placeholder="Hero Name" />
-      </div>
-      <div class="column grid-left">
-         <div class="hero-details">
 
-            <div class="flex-column flex-50">
+   <div class="charsheet" data-section="root">
+
+      <input spellcheck="false" class="font-bigtime secondary-color grid-header grid-stretch font-h1 no-border" type="text" name="attr_character_name" placeholder="Hero Name" />
+
+      <div class="grid-left" data-section="left-column">
+
+         <div class="flex-row flex-wrap" data-section="hero-details">
+            <div class="flex-column width-half">
                <label>Team</label>
                <input type="text" spellcheck="false" name="attr_TeamName" />
             </div>
-            <div class="flex-column flex-50">
+            <div class="flex-column width-half">
                <label>Background</label>
                <input type="text" name="attr_Background" />
                <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
             </div>
-            <div class="flex-column flex-50">
+            <div class="flex-column width-half">
                <label>Origin</label>
                <input type="text" name="attr_Origin" />
                <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
             </div>
-            <div class="flex-column flex-50">
+            <div class="flex-column width-half">
                <label>Nemesis</label>
                <input type="text" spellcheck="false" name="attr_Nemesis" />
                <span class="help">The iconic villain of your solo comics.</span>
             </div>
-            <div class="flex-column flex-100">
+            <div class="flex-column width-full">
                <label>Look</label>
                <input type="text" spellcheck="true" name="attr_Look" />
             </div>
-
-            <!-- there is probachrbly room here for notes or gear or something. -->
          </div>
-
-         <div class="stress">
+         <div data-section="stress-trauma-healing">
             <h3>Stress, Trauma, Healing</h3>
          </div>
-
-         <div class="relationships">
+         <div data-section="relationships">
             <h3>Relationships</h3>
-
-            <!-- todo - make a png background of the font-bigtime bullet for action and relationship radiobuttons
+         </div>
+         <!-- todo - make a png background of the font-bigtime bullet for action and relationship radiobuttons
          unchecked should be gray, may just need to adjust the color, if we can adjust the color of a png with css.
          otherwise make the three states, unchecked, unchecked hover, and checked
          -->
 
 
-         </div>
       </div>
-      <div class="column grid-middle">
+      <div class="grid-middle" data-section="middle-column">
          <div class="powersets flex-column">
             <!--todo - make powersets a repeating section -->
             <div class="powerset flex-100">

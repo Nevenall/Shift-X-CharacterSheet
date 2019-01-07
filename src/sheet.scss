@@ -1,5 +1,10 @@
 @import 'fonts/fonts.css';
 
+//todo - separate into some partials.
+// variables, fonts, colors, grid, flex
+// not sure if that's exactly what we want, but it's pretty good separate
+// could go logically, layout and styling. 
+// the point is to group them and hide  
 
 $primary-color: #0a1c20;
 $secondary-color: #d01e00;
@@ -54,8 +59,6 @@ $font-size-small: .8em;
 
    .font-bigtime {
       font-family: "BigTime";
-      font-size: $font-size-h4;
-      color: $secondary-color;
       line-height: 1.25;
    }
 
@@ -64,21 +67,50 @@ $font-size-small: .8em;
       font-weight: 700;
    }
 
-
-   .character-name {
-      grid-area: header;
-
-      input {
-         font-size: $font-size-h1;
-         line-height: 1.25em;
-         background: transparent;
-         border: none;
-      }
+   .font-h1 {
+      font-size: $font-size-h1;
    }
 
-   .column {
-      display: flex;
-      flex-direction: column;
+
+   .font-h2 {
+      font-size: $font-size-h2;
+   }
+
+
+   .font-h3 {
+      font-size: $font-size-h3;
+   }
+
+   .font-body {
+      font-size: $font-size-body;
+   }
+
+
+   .primary-color {
+      color: $primary-color;
+   }
+
+   .secondary-color {
+      color: $secondary-color;
+   }
+
+   small,
+   .font-small {
+      // todo - Adjust line height?
+      font-weight: 400;
+      font-size: $font-size-small;
+   }
+
+
+
+
+   .no-border {
+      background: transparent;
+      border: none;
+   }
+
+   .grid-header {
+      grid-area: header;
    }
 
    .grid-left {
@@ -93,6 +125,9 @@ $font-size-small: .8em;
       grid-area: right;
    }
 
+   .grid-stretch {
+      justify-self: stretch;
+   }
 
    .hero-details {
       display: flex;
@@ -100,22 +135,37 @@ $font-size-small: .8em;
    }
 
 
-   small,
-   .font-small {
-      font-weight: 400;
-      font-size: $font-size-small;
-   }
+
 
    .flex-column {
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
    }
 
    .flex-row {
       display: flex;
       flex-direction: row;
+   }
+
+   .flex-wrap {
+      flex-wrap: wrap;
+   }
+
+   .flex-nowrap {
       flex-wrap: nowrap;
+   }
+
+
+   .width-quarter {
+      width: 25%;
+   }
+
+   .width-half {
+      width: 50%;
+   }
+
+   .width-full {
+      width: 100%;
    }
 
    .flex-50 {
@@ -142,11 +192,6 @@ $font-size-small: .8em;
       flex-grow: 4;
    }
 
-
-   // .powersets {
-   //    display: flex;
-   //    flex-direction: column;
-   // }
 
 
    .powerset-name {
@@ -175,11 +220,6 @@ $font-size-small: .8em;
       font-family: "BigTime";
       font-size: $font-size-h4;
       color: $secondary-color;
-   }
-
-   .help {
-      font-weight: 400;
-      font-size: $font-size-small;
    }
 
    p {
