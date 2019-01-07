@@ -52,13 +52,17 @@ $font-size-small: .8em;
    }
 
 
-   .big-time {
+   .font-bigtime {
       font-family: "BigTime";
       font-size: $font-size-h4;
       color: $secondary-color;
       line-height: 1.25;
    }
 
+
+   .font-bold {
+      font-weight: 700;
+   }
 
 
    .character-name {
@@ -93,9 +97,6 @@ $font-size-small: .8em;
    .hero-details {
       display: flex;
       flex-wrap: wrap;
-      // flex-basis: content;
-      // justify-content: space-between;
-
    }
 
 
@@ -105,10 +106,16 @@ $font-size-small: .8em;
       font-size: $font-size-small;
    }
 
-   .field {
+   .flex-column {
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+   }
+
+   .flex-row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
    }
 
    .flex-50 {
@@ -119,15 +126,34 @@ $font-size-small: .8em;
       flex-basis: 100%;
    }
 
-   // todo - a double wide field class
-   //
+   .flex-grow-1 {
+      flex-grow: 1;
+   }
+
+   .flex-grow-2 {
+      flex-grow: 2;
+   }
+
+   .flex-grow-3 {
+      flex-grow: 3;
+   }
+
+   .flex-grow-4 {
+      flex-grow: 4;
+   }
 
 
+   // .powersets {
+   //    display: flex;
+   //    flex-direction: column;
+   // }
 
 
    .powerset-name {
-      flex-direction: row;
-      flex-wrap: nowrap;
+
+      input[type=text] {
+         flex-grow: 1;
+      }
 
       input[type=number] {
          text-align: center;

@@ -12,32 +12,32 @@
 <body>
    <!-- the root of the the sheet -->
    <div class="charsheet">
-      <div class="character-name field">
-         <input spellcheck="false" class="big-time" type="text" name="attr_character_name" placeholder="Hero Name" />
+      <div class="character-name flex-column">
+         <input spellcheck="false" class="font-bigtime" type="text" name="attr_character_name" placeholder="Hero Name" />
       </div>
       <div class="column grid-left">
          <div class="hero-details">
 
-            <div class="field flex-50">
+            <div class="flex-column flex-50">
                <label>Team</label>
                <input type="text" spellcheck="false" name="attr_TeamName" />
             </div>
-            <div class="field flex-50">
+            <div class="flex-column flex-50">
                <label>Background</label>
                <input type="text" name="attr_Background" />
                <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
             </div>
-            <div class="field flex-50">
+            <div class="flex-column flex-50">
                <label>Origin</label>
                <input type="text" name="attr_Origin" />
                <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
             </div>
-            <div class="field flex-50">
+            <div class="flex-column flex-50">
                <label>Nemesis</label>
                <input type="text" spellcheck="false" name="attr_Nemesis" />
                <span class="help">The iconic villain of your solo comics.</span>
             </div>
-            <div class="field flex-100">
+            <div class="flex-column flex-100">
                <label>Look</label>
                <input type="text" spellcheck="true" name="attr_Look" />
             </div>
@@ -52,7 +52,7 @@
          <div class="relationships">
             <h3>Relationships</h3>
 
-            <!-- todo - make a png background of the big-time bullet for action and relationship radiobuttons
+            <!-- todo - make a png background of the font-bigtime bullet for action and relationship radiobuttons
          unchecked should be gray, may just need to adjust the color, if we can adjust the color of a png with css.
          otherwise make the three states, unchecked, unchecked hover, and checked
          -->
@@ -61,21 +61,31 @@
          </div>
       </div>
       <div class="column grid-middle">
-
-         <div class="powersets">
-
+         <div class="powersets flex-column">
             <!--todo - make powersets a repeating section -->
-
-            <div class="powerset">
-               <div class="field flex-100 powerset-name">
-                  <input spellcheck="false" class="big-time" type="text" placeholder="Powerset Name" />
-                  <input class="big-time" type="number" step="1" title="Threat"/>
+            <div class="powerset flex-100">
+               <div class="flex-row powerset-name">
+                  <input spellcheck="false" class="font-bigtime" type="text" placeholder="Powerset One" />
+                  <input class="font-bigtime" type="number" step="1" title="Threat" />
                </div>
-               <div class="field flex-100">
-                  <textarea placeholder="narrative description of the power"></textarea>
+               <div class="flex-column">
+                  <textarea placeholder="description"></textarea>
                </div>
-               <div class="powers"></div>
-            
+               <div class="powers">
+                  <!-- todo - reapeating powers -->
+                  <div class="flex-row">
+                     <input type="text" spellcheck="false" class="flex-grow-1 font-bold" placeholder="power name" />
+                     <input type="text" spellcheck="true" class="flex-grow-4" placeholder="power description" />
+                  </div>
+               </div>
+               <!-- todo - repeating special effects -->
+               <div class="special-effects flex-column">
+                  <input type="text" spellcheck="true" placeholder="special effect" />
+               </div>
+               <!-- todo - repeating limits -->
+               <div class="limits flex-column">
+                  <input type="text" spellcheck="true" placeholder="limit" />
+               </div>
             </div>
 
 
@@ -84,13 +94,19 @@
          </div>
 
          <div class="abilities">
-
+            <h3>Abilities</h3>
          </div>
 
       </div>
       <div class="column grid-right">
-
+         <div class="actions">
+            <h3>Actions</h3>
+         </div>
+         <div class="gear">
+            <h3>Gear</h3>
+         </div>
       </div>
+   </div>
    </div>
 </body>
 
