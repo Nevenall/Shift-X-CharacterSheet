@@ -60,26 +60,26 @@
             <!--todo - make powersets a repeating section -->
             <div data-section="powerset">
                <div class="flex-row">
-                  <input spellcheck="false" class="font-bigtime flex-grow-1" type="text" placeholder="Powerset One" />
-                  <input class="font-bigtime" type="number" step="1" title="Threat" />
+                  <input spellcheck="false" class="font-bigtime font-h3 secondary-color no-border flex-grow-1" type="text" placeholder="Powerset One" />
+                  <input class="font-bigtime font-h3 secondary-color no-border" type="number" step="1" title="Threat" />
                </div>
                <div class="flex-column">
-                  <textarea placeholder="description"></textarea>
+                  <textarea class="no-border" placeholder="a narrative description of this set of powers"></textarea>
                </div>
-               <div class="powers">
+               <div data-section="powers">
                   <!-- todo - reapeating powers -->
                   <div class="flex-row">
-                     <input type="text" spellcheck="false" class="flex-grow-1 font-bold" placeholder="power name" />
-                     <input type="text" spellcheck="true" class="flex-grow-4" placeholder="power description" />
+                     <input type="text" spellcheck="false" class="width-quarter font-bold no-border" placeholder="power name" />
+                     <input type="text" spellcheck="true" class="flex-grow-1 no-border" placeholder="power description" />
                   </div>
                </div>
                <!-- todo - repeating special effects -->
                <div class="flex-column">
-                  <input type="text" spellcheck="true" placeholder="special effect" />
+                  <input type="text" class="no-border" spellcheck="true" placeholder="special effect" />
                </div>
                <!-- todo - repeating limits -->
                <div class="flex-column">
-                  <input type="text" spellcheck="true" placeholder="limit" />
+                  <input type="text" class="no-border" spellcheck="true" placeholder="limit" />
                </div>
             </div>
 
@@ -88,16 +88,16 @@
 
          </div>
 
-         <div class="abilities">
+         <div data-section="abilities">
             <h3>Abilities</h3>
          </div>
 
       </div>
-      <div class="column grid-right">
-         <div class="actions">
-            <h3>Actions</h3>
+      <div class="flex-column grid-right">
+         <div data-section="actions">
+            <h3 class="margin-top-zero">Actions</h3>
          </div>
-         <div class="gear">
+         <div data-section="gear">
             <h3>Gear</h3>
          </div>
       </div>

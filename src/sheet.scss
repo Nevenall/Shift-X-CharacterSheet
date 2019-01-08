@@ -56,7 +56,8 @@ $font-size-small: .8em;
    }
 
 
-   .font-bigtime {
+   .font-bigtime,
+   .font-bigtime::placeholder {
       font-family: "BigTime";
       line-height: 1.25;
    }
@@ -110,9 +111,6 @@ $font-size-small: .8em;
       font-size: $font-size-small;
    }
 
-
-
-
    .no-border {
       background: transparent;
       border: none;
@@ -161,6 +159,29 @@ $font-size-small: .8em;
    }
 
 
+   .width-one-fifth {
+      width: 20%;
+   }
+
+   .width-two-fifths {
+      width: 40%;
+   }
+
+   .width-three-fifths {
+      width: 60%;
+   }
+
+   .width-four-fifths {
+      width: 80%;
+   }
+
+   .width-five-fifths {
+      width: 100%;
+   }
+
+
+
+
    .width-quarter {
       width: 25%;
    }
@@ -197,6 +218,10 @@ $font-size-small: .8em;
       flex-grow: 4;
    }
 
+
+   .margin-top-zero {
+      margin-top: 0;
+   }
 
 
 
@@ -270,6 +295,8 @@ $font-size-small: .8em;
       color: $secondary-color;
       // margin: 0;
    }
+
+
 
    h1 {
       font-size: $font-size-h1;
