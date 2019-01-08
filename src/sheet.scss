@@ -28,6 +28,12 @@ $font-size-small: .8em;
 
 .charsheet {
 
+
+   .hover\:secondary-color:hover {
+      background-color: $secondary-color;
+   }
+
+
    min-width: 900px;
 
 
@@ -44,9 +50,8 @@ $font-size-small: .8em;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto;
-   grid-template-areas:
-      "header header header"
-      "left middle right";
+   grid-template-areas: "header header header"
+   "left middle right";
 
 
    .font-branding {
