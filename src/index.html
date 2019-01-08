@@ -25,17 +25,17 @@
             <div class="flex-column width-half">
                <label>Background</label>
                <input type="text" name="attr_Background" />
-               <span class="help">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
+               <span class="font-small">academic–business–entertainment–kid–law–military–royalty–science–underworld–wealth–working class</span>
             </div>
             <div class="flex-column width-half">
                <label>Origin</label>
                <input type="text" name="attr_Origin" />
-               <span class="help">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
+               <span class="font-small">accident–alien–cosmic–cybernetics–experiment–legacy–mutant–mystic–tech–training</span>
             </div>
             <div class="flex-column width-half">
                <label>Nemesis</label>
                <input type="text" spellcheck="false" name="attr_Nemesis" />
-               <span class="help">The iconic villain of your solo comics.</span>
+               <span class="font-small">The iconic villain of your solo comics.</span>
             </div>
             <div class="flex-column width-full">
                <label>Look</label>
@@ -52,15 +52,15 @@
          unchecked should be gray, may just need to adjust the color, if we can adjust the color of a png with css.
          otherwise make the three states, unchecked, unchecked hover, and checked
          -->
-         <button class="hover:secondary-color">Click Me!</button>
+
 
       </div>
       <div class="grid-middle" data-section="middle-column">
-         <div class="powersets flex-column">
+         <div class="flex-column" data-section="powersets">
             <!--todo - make powersets a repeating section -->
-            <div class="powerset flex-100">
-               <div class="flex-row powerset-name">
-                  <input spellcheck="false" class="font-bigtime" type="text" placeholder="Powerset One" />
+            <div data-section="powerset">
+               <div class="flex-row">
+                  <input spellcheck="false" class="font-bigtime flex-grow-1" type="text" placeholder="Powerset One" />
                   <input class="font-bigtime" type="number" step="1" title="Threat" />
                </div>
                <div class="flex-column">
@@ -74,11 +74,11 @@
                   </div>
                </div>
                <!-- todo - repeating special effects -->
-               <div class="special-effects flex-column">
+               <div class="flex-column">
                   <input type="text" spellcheck="true" placeholder="special effect" />
                </div>
                <!-- todo - repeating limits -->
-               <div class="limits flex-column">
+               <div class="flex-column">
                   <input type="text" spellcheck="true" placeholder="limit" />
                </div>
             </div>

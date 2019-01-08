@@ -28,14 +28,7 @@ $font-size-small: .8em;
 
 .charsheet {
 
-
-   .hover\:secondary-color:hover {
-      background-color: $secondary-color;
-   }
-
-
    min-width: 900px;
-
 
    font-size: $font-size-body;
    font-family: "Branding";
@@ -51,7 +44,8 @@ $font-size-small: .8em;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto;
    grid-template-areas: "header header header"
-   "left middle right";
+      "left middle right";
+
 
 
    .font-branding {
@@ -91,12 +85,22 @@ $font-size-small: .8em;
    }
 
 
+
    .primary-color {
       color: $primary-color;
    }
 
+   .hover\:primary-color:hover {
+      background-color: $primary-color;
+   }
+
+
    .secondary-color {
       color: $secondary-color;
+   }
+
+   .hover\:secondary-color:hover {
+      background-color: $secondary-color;
    }
 
    small,
@@ -134,10 +138,6 @@ $font-size-small: .8em;
       justify-self: stretch;
    }
 
-   .hero-details {
-      display: flex;
-      flex-wrap: wrap;
-   }
 
 
 
@@ -199,44 +199,44 @@ $font-size-small: .8em;
 
 
 
-   .powerset-name {
 
-      input[type=text] {
-         flex-grow: 1;
-      }
 
-      input[type=number] {
-         text-align: center;
-         width: 1.5em;
-         -moz-appearance: textfield;
-      }
 
-      input[type=number]::-webkit-inner-spin-button,
-      input[type=number]::-webkit-outer-spin-button {
-         -webkit-appearance: none;
-         -moz-appearance: none;
-         appearance: none;
-         margin: 0;
-      }
 
+
+
+
+   input[type=number] {
+      text-align: center;
+      width: 1.5em;
+      -moz-appearance: textfield;
    }
+
+   input[type=number]::-webkit-inner-spin-button,
+   input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0;
+   }
+
+
 
    label {
       font-family: "BigTime";
       font-size: $font-size-h4;
       color: $secondary-color;
+
+
    }
 
    p {
       line-height: 1.45;
    }
 
-   input {
-      font-size: $font-size-body;
-      font-family: "Branding";
-      font-weight: 500;
-      font-feature-settings: "onum"on;
 
+   input {
+      @extend .font-branding;
       background: transparent;
       border: none;
       border-bottom: 1px solid $primary-color;
