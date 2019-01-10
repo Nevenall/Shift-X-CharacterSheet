@@ -159,6 +159,15 @@ $font-size-small: .8em;
    }
 
 
+   .flex-align-stretch {
+      align-items: stretch;
+   }
+
+   .flex-self-center {
+      align-self: center;
+   }
+
+
    .width-one-fifth {
       width: 20%;
    }
@@ -226,7 +235,15 @@ $font-size-small: .8em;
 
 
 
+   .dev {
+      opacity: 0;
+		z-index: 1;
+		-moz-appearance: none;
+      //todo - set background to a bigtime bullet at some opacity
 
+      background: url('assets/bullet.png') left center no-repeat;
+background-size: 20px;
+   }
 
 
 

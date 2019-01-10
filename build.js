@@ -23,3 +23,8 @@ glob("src/fonts/**", (err, files) => {
    fs.mkdir('dist/fonts', err => {})
    files.forEach(f => fs.copyFile(f, f.replace('src', 'dist'), err => {}))
 })
+
+glob("src/assets/**", (err, files) => {
+   fs.mkdir('dist/assets', err => {})
+   files.forEach(f => fs.copyFile(f, f.replace('src', 'dist'), err => {}))
+})
