@@ -235,17 +235,18 @@ $font-size-small: .8em;
 
 
 
-   .dev {
-      opacity: 0;
-		z-index: 1;
-		-moz-appearance: none;
-      //todo - set background to a bigtime bullet at some opacity
-
+   .radio {
+     
+width:23px;
+height:23px;
       background: url('assets/bullet.png') left center no-repeat;
-background-size: 20px;
+      background-size: 20px;
    }
 
 
+   input[type=radio] {
+      display: none;
+   }
 
 
    input[type=number] {
