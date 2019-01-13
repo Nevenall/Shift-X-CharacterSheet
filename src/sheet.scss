@@ -62,6 +62,7 @@ $font-size-small: .8em;
 .font-bigtime::placeholder {
    font-family: "BigTime";
    line-height: 1.25;
+   text-indent: .125em;
 }
 
 
@@ -81,6 +82,10 @@ $font-size-small: .8em;
 
 .font-h3 {
    font-size: $font-size-h3;
+}
+
+.font-h4 {
+   font-size: $font-size-h4;
 }
 
 .font-body {
@@ -137,9 +142,6 @@ small,
 .grid-stretch {
    justify-self: stretch;
 }
-
-
-
 
 
 .flex-column {
@@ -235,15 +237,14 @@ small,
 }
 
 
-
 input[type=radio] {
    opacity: 0;
    width: 23px;
    height: 23px;
    position: relative;
-   top: 0;
-   left: 0;
-   margin: -13px;
+   padding: 0;
+   margin: 0;
+   margin-right: -23px;
    cursor: pointer;
    z-index: 1;
 }
@@ -254,41 +255,14 @@ input[type=radio]+span {
    background-size: 23px;
    width: 23px;
    height: 23px;
-   opacity: .5;
-
-}
-
-input[type=radio]:checked+span {
    opacity: 1;
+   align-self: center;
 }
 
-input[type=radio]:hover+span {
-   opacity: .75;
+
+input[type=radio]:checked~input[type=radio]+span {
+   opacity: .5;
 }
-
-// .radio {
-//    width: 23px;
-//    height: 23px;
-//    // background: url('assets/bullet.png') left center no-repeat;
-//    // background-size: 20px;
-//    font-family: "BigTime";
-//    content: "•";
-//    opacity: .5;
-
-
-
-
-// }
-
-// .radio:hover {
-//    opacity: .75;
-// }
-
-
-
-// input[type=radio] {
-//    display: none;
-// }
 
 
 input[type=number] {

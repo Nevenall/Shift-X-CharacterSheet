@@ -13,7 +13,7 @@
 
    <div class="charsheet" data-section="root">
 
-      <input spellcheck="false" class="font-bigtime secondary-color grid-header grid-stretch font-h1 no-border" type="text" name="attr_character_name" placeholder="Hero Name" />
+      <input spellcheck="false" class="font-bigtime secondary-color grid-header grid-stretch font-h1 no-border dev" type="text" name="attr_character_name" placeholder="Hero Name" />
 
       <div class="grid-left" data-section="left-column">
 
@@ -48,26 +48,16 @@
          <div class="flex-column" data-section="relationships">
             <h3>Relationships</h3>
             <div class="flex-row flex-no-wrap flex-align-stretch">
-               <input class="font-bigtime width-half no-border" type="text" placeholder="character name" name="attr_relationship_1_name" />
-
-               <input class="flex-self-center" type="radio" value="1" name="attr_relationship_1_value" /><span></span>
-               <input class="flex-self-center" type="radio" value="2" name="attr_relationship_2_value" /><span></span>
-
-
-               <!-- <input class="dev flex-self-center" type="radio" value="2" name="attr_relationship_1_value" />
-               <input class="dev flex-self-center" type="radio" value="3" name="attr_relationship_1_value" />
-               <input class="dev flex-self-center" type="radio" value="4" name="attr_relationship_1_value" />
-               <input class="dev flex-self-center" type="radio" value="5" name="attr_relationship_1_value" /> -->
+               <input class="font-bigtime width-half no-border font-h4 secondary-color" type="text" placeholder="Character Name" name="attr_relationship_1_name" />
+               <div class="flex-self-center">
+                  <input type="radio" value="0" name="attr_relationship_1_value" checked />
+                  <input type="radio" value="1" name="attr_relationship_1_value" /><span></span>
+                  <input type="radio" value="2" name="attr_relationship_1_value" /><span></span>
+                  <input type="radio" value="3" name="attr_relationship_1_value" /><span></span>
+                  <input type="radio" value="4" name="attr_relationship_1_value" /><span></span>
+               </div>
             </div>
-
-
-
          </div>
-         <!-- todo - make a png background of the font-bigtime bullet for action and relationship radiobuttons
-         unchecked should be gray, may just need to adjust the color, if we can adjust the color of a png with css.
-         otherwise make the three states, unchecked, unchecked hover, and checked
-         -->
-
 
       </div>
       <div class="grid-middle" data-section="middle-column">
