@@ -26,6 +26,8 @@ $font-size-small: .8em;
 
 
 
+// .charsheet {
+
 .charsheet {
 
    min-width: 900px;
@@ -46,298 +48,331 @@ $font-size-small: .8em;
    grid-template-areas: "header header header"
       "left middle right";
 
+}
 
+.font-branding {
+   font-size: $font-size-body;
+   font-family: "Branding";
+   font-weight: 500;
+   font-feature-settings: "onum"on;
+}
 
-   .font-branding {
-      font-size: $font-size-body;
-      font-family: "Branding";
-      font-weight: 500;
-      font-feature-settings: "onum"on;
-   }
 
+.font-bigtime,
+.font-bigtime::placeholder {
+   font-family: "BigTime";
+   line-height: 1.25;
+}
 
-   .font-bigtime,
-   .font-bigtime::placeholder {
-      font-family: "BigTime";
-      line-height: 1.25;
-   }
 
+.font-bold {
+   font-weight: 700;
+}
 
-   .font-bold {
-      font-weight: 700;
-   }
+.font-h1 {
+   font-size: $font-size-h1;
+}
 
-   .font-h1 {
-      font-size: $font-size-h1;
-   }
 
+.font-h2 {
+   font-size: $font-size-h2;
+}
 
-   .font-h2 {
-      font-size: $font-size-h2;
-   }
 
+.font-h3 {
+   font-size: $font-size-h3;
+}
 
-   .font-h3 {
-      font-size: $font-size-h3;
-   }
+.font-body {
+   font-size: $font-size-body;
+}
 
-   .font-body {
-      font-size: $font-size-body;
-   }
 
 
+.primary-color {
+   color: $primary-color;
+}
 
-   .primary-color {
-      color: $primary-color;
-   }
+.hover\:primary-color:hover {
+   background-color: $primary-color;
+}
 
-   .hover\:primary-color:hover {
-      background-color: $primary-color;
-   }
 
+.secondary-color {
+   color: $secondary-color;
+}
 
-   .secondary-color {
-      color: $secondary-color;
-   }
+.hover\:secondary-color:hover {
+   background-color: $secondary-color;
+}
 
-   .hover\:secondary-color:hover {
-      background-color: $secondary-color;
-   }
+small,
+.font-small {
+   // todo - Adjust line height?
+   font-weight: 400;
+   font-size: $font-size-small;
+}
 
-   small,
-   .font-small {
-      // todo - Adjust line height?
-      font-weight: 400;
-      font-size: $font-size-small;
-   }
+.no-border {
+   background: transparent;
+   border: none;
+}
 
-   .no-border {
-      background: transparent;
-      border: none;
-   }
+.grid-header {
+   grid-area: header;
+}
 
-   .grid-header {
-      grid-area: header;
-   }
+.grid-left {
+   grid-area: left;
+}
 
-   .grid-left {
-      grid-area: left;
-   }
+.grid-middle {
+   grid-area: middle;
+}
 
-   .grid-middle {
-      grid-area: middle;
-   }
+.grid-right {
+   grid-area: right;
+}
 
-   .grid-right {
-      grid-area: right;
-   }
+.grid-stretch {
+   justify-self: stretch;
+}
 
-   .grid-stretch {
-      justify-self: stretch;
-   }
 
 
 
 
+.flex-column {
+   display: flex;
+   flex-direction: column;
+}
 
-   .flex-column {
-      display: flex;
-      flex-direction: column;
-   }
+.flex-row {
+   display: flex;
+   flex-direction: row;
+}
 
-   .flex-row {
-      display: flex;
-      flex-direction: row;
-   }
+.flex-wrap {
+   flex-wrap: wrap;
+}
 
-   .flex-wrap {
-      flex-wrap: wrap;
-   }
+.flex-nowrap {
+   flex-wrap: nowrap;
+}
 
-   .flex-nowrap {
-      flex-wrap: nowrap;
-   }
 
+.flex-align-stretch {
+   align-items: stretch;
+}
 
-   .flex-align-stretch {
-      align-items: stretch;
-   }
+.flex-self-center {
+   align-self: center;
+}
 
-   .flex-self-center {
-      align-self: center;
-   }
 
+.width-one-fifth {
+   width: 20%;
+}
 
-   .width-one-fifth {
-      width: 20%;
-   }
+.width-two-fifths {
+   width: 40%;
+}
 
-   .width-two-fifths {
-      width: 40%;
-   }
+.width-three-fifths {
+   width: 60%;
+}
 
-   .width-three-fifths {
-      width: 60%;
-   }
+.width-four-fifths {
+   width: 80%;
+}
 
-   .width-four-fifths {
-      width: 80%;
-   }
+.width-five-fifths {
+   width: 100%;
+}
 
-   .width-five-fifths {
-      width: 100%;
-   }
 
 
 
+.width-quarter {
+   width: 25%;
+}
 
-   .width-quarter {
-      width: 25%;
-   }
+.width-half {
+   width: 50%;
+}
 
-   .width-half {
-      width: 50%;
-   }
+.width-full {
+   width: 100%;
+}
 
-   .width-full {
-      width: 100%;
-   }
+.flex-50 {
+   flex-basis: 50%;
+}
 
-   .flex-50 {
-      flex-basis: 50%;
-   }
+.flex-100 {
+   flex-basis: 100%;
+}
 
-   .flex-100 {
-      flex-basis: 100%;
-   }
+.flex-grow-1 {
+   flex-grow: 1;
+}
 
-   .flex-grow-1 {
-      flex-grow: 1;
-   }
+.flex-grow-2 {
+   flex-grow: 2;
+}
 
-   .flex-grow-2 {
-      flex-grow: 2;
-   }
+.flex-grow-3 {
+   flex-grow: 3;
+}
 
-   .flex-grow-3 {
-      flex-grow: 3;
-   }
+.flex-grow-4 {
+   flex-grow: 4;
+}
 
-   .flex-grow-4 {
-      flex-grow: 4;
-   }
 
+.margin-top-zero {
+   margin-top: 0;
+}
 
-   .margin-top-zero {
-      margin-top: 0;
-   }
 
 
+input[type=radio] {
+   opacity: 0;
+   width: 23px;
+   height: 23px;
+   position: relative;
+   top: 0;
+   left: 0;
+   margin: -13px;
+   cursor: pointer;
+   z-index: 1;
+}
 
-
-   .radio {
-      width: 23px;
-      height: 23px;
-      background: url('assets/bullet.png') left center no-repeat;
-      background-size: 20px;
-      opacity: .5;
-   }
-
-
-   input[type=radio] {
-      display: none;
-   }
-
-
-   input[type=number] {
-      text-align: center;
-      width: 1.5em;
-      -moz-appearance: textfield;
-   }
-
-   input[type=number]::-webkit-inner-spin-button,
-   input[type=number]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      margin: 0;
-   }
-
-
-
-   label {
-      font-family: "BigTime";
-      font-size: $font-size-h4;
-      color: $secondary-color;
-
-
-   }
-
-   p {
-      line-height: 1.45;
-   }
-
-
-   input {
-      @extend .font-branding;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid $primary-color;
-   }
-
-
-   textarea {
-
-      font-size: $font-size-h6;
-      font-family: "Branding";
-      font-weight: 500;
-      font-feature-settings: "onum"on;
-
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid $primary-color;
-   }
-
-   label {
-      font-weight: normal;
-   }
-
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   h6 {
-      font-family: "Bigtime";
-      font-weight: normal;
-      color: $secondary-color;
-      // margin: 0;
-   }
-
-
-
-   h1 {
-      font-size: $font-size-h1;
-   }
-
-   h2 {
-      font-size: $font-size-h2;
-   }
-
-   h3 {
-      font-size: $font-size-h3;
-   }
-
-   h4 {
-      font-size: $font-size-h4;
-   }
-
-   h5 {
-      font-size: $font-size-h5;
-   }
-
-   h6 {
-      font-size: $font-size-h6;
-   }
+input[type=radio]+span {
+   display: inline-block;
+   background: url('assets/bullet.png') left center no-repeat;
+   background-size: 23px;
+   width: 23px;
+   height: 23px;
+   opacity: .5;
 
 }
+
+input[type=radio]:checked+span {
+   opacity: 1;
+}
+
+input[type=radio]:hover+span {
+   opacity: .75;
+}
+
+// .radio {
+//    width: 23px;
+//    height: 23px;
+//    // background: url('assets/bullet.png') left center no-repeat;
+//    // background-size: 20px;
+//    font-family: "BigTime";
+//    content: "•";
+//    opacity: .5;
+
+
+
+
+// }
+
+// .radio:hover {
+//    opacity: .75;
+// }
+
+
+
+// input[type=radio] {
+//    display: none;
+// }
+
+
+input[type=number] {
+   text-align: center;
+   width: 1.5em;
+   -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   margin: 0;
+}
+
+
+
+label {
+   font-family: "BigTime";
+   font-size: $font-size-h4;
+   color: $secondary-color;
+   font-weight: normal;
+}
+
+p {
+   line-height: 1.45;
+}
+
+
+input {
+   @extend .font-branding;
+   background: transparent;
+   border: none;
+   border-bottom: 1px solid $primary-color;
+}
+
+
+textarea {
+
+   font-size: $font-size-h6;
+   font-family: "Branding";
+   font-weight: 500;
+   font-feature-settings: "onum"on;
+
+   background: transparent;
+   border: none;
+   border-bottom: 1px solid $primary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Bigtime";
+   font-weight: normal;
+   color: $secondary-color;
+}
+
+
+h1 {
+   font-size: $font-size-h1;
+}
+
+h2 {
+   font-size: $font-size-h2;
+}
+
+h3 {
+   font-size: $font-size-h3;
+}
+
+h4 {
+   font-size: $font-size-h4;
+}
+
+h5 {
+   font-size: $font-size-h5;
+}
+
+h6 {
+   font-size: $font-size-h6;
+}
+
+// }
