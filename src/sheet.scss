@@ -74,11 +74,9 @@ $font-size-small: .8em;
    font-size: $font-size-h1;
 }
 
-
 .font-h2 {
    font-size: $font-size-h2;
 }
-
 
 .font-h3 {
    font-size: $font-size-h3;
@@ -86,6 +84,10 @@ $font-size-small: .8em;
 
 .font-h4 {
    font-size: $font-size-h4;
+}
+
+.font-h5 {
+   font-size: $font-size-h5;
 }
 
 .font-body {
@@ -167,10 +169,13 @@ small,
    align-items: stretch;
 }
 
+.flex-align-center {
+   align-items: center;
+}
+
 .flex-self-center {
    align-self: center;
 }
-
 
 .width-one-fifth {
    width: 20%;
@@ -232,37 +237,76 @@ small,
 }
 
 
-.margin-top-zero {
+.margin-top-0 {
    margin-top: 0;
 }
 
 
-input[type=radio] {
+.as-box {
+   background: url('assets/box-checked.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
+
+
+.as-bullet {
+   background: url('assets/bullet.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
+
+input[type=radio],
+input[type=checkbox] {
    opacity: 0;
-   width: 23px;
-   height: 23px;
+   width: 1.25em;
+   height: 1.25em;
    position: relative;
    padding: 0;
    margin: 0;
-   margin-right: -23px;
+   margin-right: -1.25em;
    cursor: pointer;
    z-index: 1;
 }
 
-input[type=radio]+span {
-   display: inline-block;
-   background: url('assets/bullet.png') left center no-repeat;
-   background-size: 23px;
-   width: 23px;
-   height: 23px;
-   opacity: 1;
-   align-self: center;
+// when 0 is not selected, move to top so we can unselect all
+input[type=radio][value="0"]:not(:checked) {
+   z-index: 9;
 }
 
+input[type=radio]+.as-bullet {
+   display: inline-block;
+   width: 1.25em;
+   height: 1.25em;
+   // on state
+   opacity: 1;
+}
 
-input[type=radio]:checked~input[type=radio]+span {
+input[type=radio]:checked~input[type=radio]+.as-bullet {
+   // off state
    opacity: .5;
 }
+
+input[type=radio]+.as-box {
+   display: inline-block;
+   width: 1.25em;
+   height: 1.25em;
+   // on state
+   background: url('assets/box-checked.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
+input[type=radio]:checked+.as-box {
+   // on state
+   background: url('assets/box-checked.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
+input[type=radio]:checked~input[type=radio]+.as-box {
+   // off state
+   background: url('assets/box-empty.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
 
 
 input[type=number] {
