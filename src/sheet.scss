@@ -308,10 +308,47 @@ input[type=radio]:checked~input[type=radio]+.as-box {
    background-size: 1em;
 }
 
-// todo - triagle check boxes
-// we could do some fancy three radio button sequence where we play with z-index
-// or just have two checkboxes, up and down, they'll be nice and compact. 
-// the tri-state radio button would work good for relationship status though. 
+
+input[type=checkbox]+.as-diamond {
+   display: inline-block;
+   width: 1.25em;
+   height: 1.25em;
+   background: url('assets/diamond-empty.png') left center no-repeat;
+   background-size: 1em;
+}
+
+input[type=checkbox]:checked+.as-diamond {
+   background: url('assets/diamond-checked.png') left center no-repeat;
+   background-size: 1em;
+}
+
+
+input[type=checkbox]+.as-triangle-down {
+   display: inline-block;
+   width: 1.25em;
+   height: 1.25em;
+   background: url('assets/triangle-down-empty.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
+input[type=checkbox]:checked+.as-triangle-down {
+   background: url('assets/triangle-down-checked.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
+input[type=checkbox]+.as-triangle-up {
+   display: inline-block;
+   width: 1.25em;
+   height: 1.25em;
+   background: url('assets/triangle-up-empty.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
+input[type=checkbox]:checked+.as-triangle-up {
+   background: url('assets/triangle-up-checked.png') left center no-repeat;
+   background-size: 1.25em;
+}
+
 
 input[type=number] {
    text-align: center;
