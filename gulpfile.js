@@ -52,5 +52,5 @@ function watchTask() {
 
 
 exports.build = buildSeries
-exports.watch = watchTask
+exports.watch = series(buildSeries, watchTask)
 exports.default = buildSeries
