@@ -120,9 +120,15 @@ small,
    font-size: $font-size-small;
 }
 
-.no-border {
+.border-none {
    background: transparent;
    border: none;
+}
+
+
+.border-bottom {
+   border: none;
+   border-bottom: 1px solid $primary-color;
 }
 
 .grid-header {
@@ -171,6 +177,10 @@ small,
 
 .flex-align-center {
    align-items: center;
+}
+
+.flex-align-baseline {
+   align-items: baseline;
 }
 
 .flex-self-center {
