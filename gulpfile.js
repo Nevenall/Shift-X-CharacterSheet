@@ -9,13 +9,29 @@ const {
 const sass = require('gulp-sass')
 sass.compiler = require('node-sass')
 const del = require('delete')
+const vars = require('gulp-sass-variables')
+
+function asDevelopment(callback) {
+   process.env.NODE_ENV = "development"
+   callback()
+}
+
+function asProduction(callback) {
+   process.env.NODE_ENV = 'production'
+   callback()
+}
 
 function css() {
-   return src('src/**/*.scss')
+   const env = process.env.NODE_ENV || "development"
+
+   return src('src/sheet.scss')
+      .pipe(vars({
+         $env: env,
+         $base: env === 'production' ? "https://cdn.nevenallgames.com/" : ""
+      }))
       .pipe(sass()).on('error', sass.logError)
       .pipe(dest('dist/'))
 }
-
 
 function html() {
    return src('src/**/*.html')
@@ -41,16 +57,14 @@ function clean(callback) {
    return del('dist/**', callback)
 }
 
-const buildSeries = series(clean, html, css, javascript, fonts, assets)
 
-
-function watchTask() {
-   watch('src/**', buildSeries)
+function watchSource() {
+   watch('src/**', build)
 }
 
+const build = series(clean, html, css, javascript, fonts, assets)
 
-
-
-exports.build = buildSeries
-exports.watch = series(buildSeries, watchTask)
-exports.default = buildSeries
+exports.build = series(asDevelopment, build)
+exports.watch = series(build, watchSource)
+exports.production = series(asProduction, build)
+exports.default = build
