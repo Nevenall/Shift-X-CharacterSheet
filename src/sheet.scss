@@ -1,10 +1,5 @@
-@import 'fonts/fonts.css';
+@import 'fonts/fonts.scss';
 
-//todo - separate into some partials.
-// variables, fonts, colors, grid, flex
-// not sure if that's exactly what we want, but it's pretty good separate
-// could go logically, layout and styling. 
-// the point is to group them and hide  
 
 $primary-color: #0a1c20;
 $secondary-color: #d01e00;
@@ -23,12 +18,7 @@ $font-size-body: 1em;
 $font-size-small: .8em;
 
 
-
-
-
-// .charsheet {
-
-.charsheet {
+.root {
 
    min-width: 900px;
 

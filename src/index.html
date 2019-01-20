@@ -11,7 +11,7 @@
 
 <body>
 
-   <div class="charsheet" data-section="root">
+   <div class="root" data-section="root">
 
       <input spellcheck="false" class="font-bigtime secondary-color grid-header grid-stretch font-h1 border-none dev" type="text" name="attr_character_name" placeholder="Hero Name" />
 
@@ -105,31 +105,30 @@
       <div class="grid-middle" data-section="middle-column">
          <div class="flex-column" data-section="powersets">
             <!--todo - make powersets a repeating section -->
-            <div data-section="powerset">
+            <div data-section="powerset_1">
                <div class="flex-row">
-                  <input spellcheck="false" class="font-bigtime font-h3 secondary-color border-none flex-grow-1" type="text" placeholder="Powerset One" />
-                  <input class="font-bigtime font-h3 secondary-color border-none" type="number" step="1" title="Threat" />
+                  <input spellcheck="false" class="font-bigtime font-h3 secondary-color border-none flex-grow-1" type="text" name="attr_powerset_1_name" placeholder="Powerset One" />
+                  <input class="font-bigtime font-h3 secondary-color border-none" type="number" name="attr_powerset_1_threat" step="1" title="Threat" />
                </div>
                <div class="flex-column">
-                  <textarea class="border-none" placeholder="a narrative description of this set of powers"></textarea>
+                  <textarea class="border-none" name="attr_powerset_1_description" placeholder="a narrative description of this set of powers"></textarea>
                </div>
                <div data-section="powers">
                   <!-- todo - reapeating powers -->
                   <div class="flex-row">
-                     <input type="text" spellcheck="false" class="width-quarter font-bold border-none" placeholder="power name" />
-                     <input type="text" spellcheck="true" class="flex-grow-1 border-none" placeholder="power description" />
+                     <input type="text" spellcheck="false" class="width-quarter font-bold border-none" name="attr_powerset_1_power_1_name" placeholder="power name" />
+                     <input type="text" spellcheck="true" class="flex-grow-1 border-none" name="attr_powerset_1_power_1_description" placeholder="power description" />
                   </div>
                </div>
                <!-- todo - repeating special effects -->
                <div class="flex-column">
-                  <input type="text" class="border-none" spellcheck="true" placeholder="special effect" />
+                  <input type="text" class="border-none" spellcheck="true" name="attr_powerset_1_specialeffect_1" placeholder="special effect" />
                </div>
                <!-- todo - repeating limits -->
                <div class="flex-column">
-                  <input type="text" class="border-none" spellcheck="true" placeholder="limit" />
+                  <input type="text" class="border-none" spellcheck="true" name="attr_powerset_1_limit_1" placeholder="limit" />
                </div>
             </div>
-
 
          </div>
          <div data-section="abilities">
@@ -334,7 +333,6 @@
             <h3>Gear</h3>
          </div>
       </div>
-   </div>
    </div>
 </body>
 
