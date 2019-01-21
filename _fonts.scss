@@ -12,96 +12,96 @@
    font-family: 'Branding';
    font-style: normal;
    font-weight: 900;
-   src: url('fonts/Branding-Black.woff2') format('woff2');
+   src: base('fonts/Branding-Black.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: italic;
    font-weight: 900;
-   src: url(Branding-BlackItalic.woff2) format('woff2');
+   src: base('fonts/Branding-BlackItalic.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: normal;
    font-weight: 700;
-   src: url(Branding-Bold.woff2) format('woff2');
+   src: base('fonts/Branding-Bold.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: italic;
    font-weight: 700;
-   src: url(Branding-BoldItalic.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-BoldItalic.woff2) format('woff2');
+   src: base('fonts/Branding-BoldItalic.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: normal;
    font-weight: 300;
-   src: url(Branding-Light.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-Light.woff2) format('woff2');
+   src: base('fonts/Branding-Light.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: italic;
    font-weight: 300;
-   src: url(Branding-LightItalic.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-LightItalic.woff2) format('woff2');
+   src: base('fonts/Branding-LightItalic.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: normal;
    font-weight: 500;
-   src: url(Branding-Medium.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-Medium.woff2) format('woff2');
+   src: base('fonts/Branding-Medium.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: italic;
    font-weight: 500;
-   src: url(Branding-MediumItalic.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-MediumItalic.woff2) format('woff2');
+   src: base('fonts/Branding-MediumItalic.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: normal;
    font-weight: 600;
-   src: url(Branding-Semibold.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-Semibold.woff2) format('woff2');
+   src: base('fonts/Branding-Semibold.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: italic;
    font-weight: 600;
-   src: url(Branding-SemiboldItalic.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-SemiboldItalic.woff2) format('woff2');
+   src: base('fonts/Branding-SemiboldItalic.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: normal;
    font-weight: 400;
-   src: url(Branding-Semilight.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-Semilight.woff2) format('woff2');
+   src: base('fonts/Branding-Semilight.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: italic;
    font-weight: 400;
-   src: url(Branding-SemilightItalic.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-SemilightItalic.woff2) format('woff2');
+   src: base('fonts/Branding-SemilightItalic.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: normal;
    font-weight: 100;
-   src: url(Branding-Thin.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-Thin.woff2) format('woff2');
+   src: base('fonts/Branding-Thin.woff2') format('woff2');
 }
 
 @font-face {
    font-family: 'Branding';
    font-style: italic;
    font-weight: 100;
-   src: url(Branding-ThinItalic.woff2) format('woff2'), url(https://cdn.nevenallgames.com/fonts/Branding-ThinItalic.woff2) format('woff2');
+   src: base('fonts/Branding-ThinItalic.woff2') format('woff2');
 }

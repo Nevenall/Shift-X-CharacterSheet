@@ -250,7 +250,7 @@ small,
 
 
 .as-bullet {
-   background: url('assets/bullet.png') left center no-repeat;
+   background: base('assets/bullet.png') left center no-repeat;
    background-size: 1.25em;
 }
 
@@ -292,19 +292,19 @@ input[type=radio]+.as-box {
    height: 1em;
    margin-right: 2px;
    // on state
-   background: url('assets/box-checked.png') left center no-repeat;
+   background: base('assets/box-checked.png') left center no-repeat;
    background-size: 1em;
 }
 
 input[type=radio]:checked+.as-box {
    // on state
-   background: url('assets/box-checked.png') left center no-repeat;
+   background: base('assets/box-checked.png') left center no-repeat;
    background-size: 1em;
 }
 
 input[type=radio]:checked~input[type=radio]+.as-box {
    // off state
-   background: url('assets/box-empty.png') left center no-repeat;
+   background: base('assets/box-empty.png') left center no-repeat;
    background-size: 1em;
 }
 
@@ -313,12 +313,12 @@ input[type=checkbox]+.as-diamond {
    display: inline-block;
    width: 1.25em;
    height: 1.25em;
-   background: url('assets/diamond-empty.png') left center no-repeat;
+   background: base('assets/diamond-empty.png') left center no-repeat;
    background-size: 1em;
 }
 
 input[type=checkbox]:checked+.as-diamond {
-   background: url('assets/diamond-checked.png') left center no-repeat;
+   background: base('assets/diamond-checked.png') left center no-repeat;
    background-size: 1em;
 }
 
@@ -327,12 +327,12 @@ input[type=checkbox]+.as-triangle-down {
    display: inline-block;
    width: 1.25em;
    height: 1.25em;
-   background: url('assets/triangle-down-empty.png') left center no-repeat;
+   background: base('assets/triangle-down-empty.png') left center no-repeat;
    background-size: 1.25em;
 }
 
 input[type=checkbox]:checked+.as-triangle-down {
-   background: url('assets/triangle-down-checked.png') left center no-repeat;
+   background: base('assets/triangle-down-checked.png') left center no-repeat;
    background-size: 1.25em;
 }
 
@@ -340,12 +340,12 @@ input[type=checkbox]+.as-triangle-up {
    display: inline-block;
    width: 1.25em;
    height: 1.25em;
-   background: url('assets/triangle-up-empty.png') left center no-repeat;
+   background: base('assets/triangle-up-empty.png') left center no-repeat;
    background-size: 1.25em;
 }
 
 input[type=checkbox]:checked+.as-triangle-up {
-   background: url('assets/triangle-up-checked.png') left center no-repeat;
+   background: base('assets/triangle-up-checked.png') left center no-repeat;
    background-size: 1.25em;
 }
 
