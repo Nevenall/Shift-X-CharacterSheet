@@ -18,7 +18,10 @@ $font-size-body: 1em;
 $font-size-small: .8em;
 
 
-.charsheet {
+// todo - each class has to be prefixed with sheet-
+// not element selectors though
+
+.sheet {
 
    min-width: 900px;
 
@@ -38,400 +41,406 @@ $font-size-small: .8em;
    grid-template-areas: "header header header"
       "left middle right";
 
-}
-
-.font-branding {
-   font-size: $font-size-body;
-   font-family: "Branding";
-   font-weight: 500;
-   font-feature-settings: "onum"on;
-}
-
-
-.font-bigtime,
-.font-bigtime::placeholder {
-   font-family: "BigTime";
-   line-height: 1.25;
-   text-indent: .125em;
-}
-
-
-.font-bold {
-   font-weight: 700;
-}
-
-.font-h1 {
-   font-size: $font-size-h1;
-}
-
-.font-h2 {
-   font-size: $font-size-h2;
-}
-
-.font-h3 {
-   font-size: $font-size-h3;
-}
-
-.font-h4 {
-   font-size: $font-size-h4;
-}
-
-.font-h5 {
-   font-size: $font-size-h5;
-}
-
-.font-body {
-   font-size: $font-size-body;
-}
-
-
-
-.primary-color {
-   color: $primary-color;
-}
-
-.hover\:primary-color:hover {
-   background-color: $primary-color;
-}
-
-
-.secondary-color {
-   color: $secondary-color;
-}
-
-.hover\:secondary-color:hover {
-   background-color: $secondary-color;
-}
-
-small,
-.font-small {
-   // todo - Adjust line height?
-   font-weight: 400;
-   font-size: $font-size-small;
-}
-
-.border-none {
-   background: transparent;
-   border: none;
-}
-
-
-.border-bottom {
-   border: none;
-   border-bottom: 1px solid $primary-color;
-}
-
-.grid-header {
-   grid-area: header;
-}
-
-.grid-left {
-   grid-area: left;
-}
-
-.grid-middle {
-   grid-area: middle;
-}
-
-.grid-right {
-   grid-area: right;
-}
-
-.grid-stretch {
-   justify-self: stretch;
-}
-
-
-.flex-column {
-   display: flex;
-   flex-direction: column;
-}
-
-.flex-row {
-   display: flex;
-   flex-direction: row;
-}
-
-.flex-wrap {
-   flex-wrap: wrap;
-}
-
-.flex-nowrap {
-   flex-wrap: nowrap;
-}
-
-
-.flex-align-stretch {
-   align-items: stretch;
-}
-
-.flex-align-center {
-   align-items: center;
-}
-
-.flex-align-baseline {
-   align-items: baseline;
-}
-
-.flex-self-center {
-   align-self: center;
-}
-
-.width-one-fifth {
-   width: 20%;
-}
-
-.width-two-fifths {
-   width: 40%;
-}
+   //todo - this will work for tghe sheet- prefix, but how are we supposed to test this if
+   // the test html doesn't have the sheet-? omg, this is terrible. 
+   // what if we just did characters as images? 
+   &-a-class {
+      font-family: 'Courier New', Courier, monospace;
+   }
 
-.width-three-fifths {
-   width: 60%;
-}
-
-.width-four-fifths {
-   width: 80%;
-}
 
-.width-five-fifths {
-   width: 100%;
-}
-
+   .font-branding {
+      font-size: $font-size-body;
+      font-family: "Branding";
+      font-weight: 500;
+      font-feature-settings: "onum"on;
+   }
 
 
+   .font-bigtime,
+   .font-bigtime::placeholder {
+      font-family: "BigTime";
+      line-height: 1.25;
+      text-indent: .125em;
+   }
 
-.width-quarter {
-   width: 25%;
-}
 
-.width-half {
-   width: 50%;
-}
+   .font-bold {
+      font-weight: 700;
+   }
 
-.width-full {
-   width: 100%;
-}
+   .font-h1 {
+      font-size: $font-size-h1;
+   }
 
-.flex-50 {
-   flex-basis: 50%;
-}
+   .font-h2 {
+      font-size: $font-size-h2;
+   }
 
-.flex-100 {
-   flex-basis: 100%;
-}
+   .font-h3 {
+      font-size: $font-size-h3;
+   }
 
-.flex-grow-1 {
-   flex-grow: 1;
-}
+   .font-h4 {
+      font-size: $font-size-h4;
+   }
 
-.flex-grow-2 {
-   flex-grow: 2;
-}
+   .font-h5 {
+      font-size: $font-size-h5;
+   }
 
-.flex-grow-3 {
-   flex-grow: 3;
-}
+   .font-body {
+      font-size: $font-size-body;
+   }
 
-.flex-grow-4 {
-   flex-grow: 4;
-}
 
 
-.margin-top-0 {
-   margin-top: 0;
-}
+   .primary-color {
+      color: $primary-color;
+   }
 
+   .hover\:primary-color:hover {
+      background-color: $primary-color;
+   }
 
-.as-box {
-   background: base('assets/box-checked.png') left center no-repeat;
-   background-size: 1em;
-}
 
+   .secondary-color {
+      color: $secondary-color;
+   }
 
+   .hover\:secondary-color:hover {
+      background-color: $secondary-color;
+   }
 
-.as-bullet {
-   background: base('assets/bullet.png') left center no-repeat;
-   background-size: 1.25em;
-}
+   small,
+   .font-small {
+      // todo - Adjust line height?
+      font-weight: 400;
+      font-size: $font-size-small;
+   }
 
+   .border-none {
+      background: transparent;
+      border: none;
+   }
 
-input[type=radio],
-input[type=checkbox] {
-   opacity: 0;
-   width: 1.25em;
-   height: 1.25em;
-   position: relative;
-   padding: 0;
-   margin: 0;
-   margin-right: -1.25em;
-   cursor: pointer;
-   z-index: 1;
-}
 
-// when 0 is not selected, move to top so we can unselect all
-input[type=radio][value="0"]:not(:checked) {
-   z-index: 9;
-}
+   .border-bottom {
+      border: none;
+      border-bottom: 1px solid $primary-color;
+   }
 
-input[type=radio]+.as-bullet {
-   display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
-   // on state
-   opacity: 1;
-}
+   .grid-header {
+      grid-area: header;
+   }
 
-input[type=radio]:checked~input[type=radio]+.as-bullet {
-   // off state
-   opacity: .5;
-}
+   .grid-left {
+      grid-area: left;
+   }
 
-input[type=radio]+.as-box {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   margin-right: 2px;
-   // on state
-   background: base('assets/box-checked.png') left center no-repeat;
-   background-size: 1em;
-}
+   .grid-middle {
+      grid-area: middle;
+   }
 
-input[type=radio]:checked+.as-box {
-   // on state
-   background: base('assets/box-checked.png') left center no-repeat;
-   background-size: 1em;
-}
+   .grid-right {
+      grid-area: right;
+   }
 
-input[type=radio]:checked~input[type=radio]+.as-box {
-   // off state
-   background: base('assets/box-empty.png') left center no-repeat;
-   background-size: 1em;
-}
+   .grid-stretch {
+      justify-self: stretch;
+   }
 
 
-input[type=checkbox]+.as-diamond {
-   display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
-   background: base('assets/diamond-empty.png') left center no-repeat;
-   background-size: 1em;
-}
+   .flex-column {
+      display: flex;
+      flex-direction: column;
+   }
 
-input[type=checkbox]:checked+.as-diamond {
-   background: base('assets/diamond-checked.png') left center no-repeat;
-   background-size: 1em;
-}
+   .flex-row {
+      display: flex;
+      flex-direction: row;
+   }
 
+   .flex-wrap {
+      flex-wrap: wrap;
+   }
 
-input[type=checkbox]+.as-triangle-down {
-   display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
-   background: base('assets/triangle-down-empty.png') left center no-repeat;
-   background-size: 1.25em;
-}
+   .flex-nowrap {
+      flex-wrap: nowrap;
+   }
 
-input[type=checkbox]:checked+.as-triangle-down {
-   background: base('assets/triangle-down-checked.png') left center no-repeat;
-   background-size: 1.25em;
-}
 
-input[type=checkbox]+.as-triangle-up {
-   display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
-   background: base('assets/triangle-up-empty.png') left center no-repeat;
-   background-size: 1.25em;
-}
+   .flex-align-stretch {
+      align-items: stretch;
+   }
 
-input[type=checkbox]:checked+.as-triangle-up {
-   background: base('assets/triangle-up-checked.png') left center no-repeat;
-   background-size: 1.25em;
-}
+   .flex-align-center {
+      align-items: center;
+   }
 
+   .flex-align-baseline {
+      align-items: baseline;
+   }
 
-input[type=number] {
-   text-align: center;
-   width: 1.5em;
-   -moz-appearance: textfield;
-}
+   .flex-self-center {
+      align-self: center;
+   }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-   margin: 0;
-}
+   .width-one-fifth {
+      width: 20%;
+   }
 
+   .width-two-fifths {
+      width: 40%;
+   }
 
+   .width-three-fifths {
+      width: 60%;
+   }
 
-label {
-   font-family: "BigTime";
-   font-size: $font-size-h4;
-   color: $secondary-color;
-   font-weight: normal;
-}
+   .width-four-fifths {
+      width: 80%;
+   }
 
-p {
-   line-height: 1.45;
-}
+   .width-five-fifths {
+      width: 100%;
+   }
 
 
-input {
-   @extend .font-branding;
-   background: transparent;
-   border: none;
-   border-bottom: 1px solid $primary-color;
-}
 
 
-textarea {
+   .width-quarter {
+      width: 25%;
+   }
 
-   font-size: $font-size-h6;
-   font-family: "Branding";
-   font-weight: 500;
-   font-feature-settings: "onum"on;
+   .width-half {
+      width: 50%;
+   }
 
-   background: transparent;
-   border: none;
-   border-bottom: 1px solid $primary-color;
-}
+   .width-full {
+      width: 100%;
+   }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: "Bigtime";
-   font-weight: normal;
-   color: $secondary-color;
-}
+   .flex-50 {
+      flex-basis: 50%;
+   }
 
+   .flex-100 {
+      flex-basis: 100%;
+   }
 
-h1 {
-   font-size: $font-size-h1;
-}
+   .flex-grow-1 {
+      flex-grow: 1;
+   }
 
-h2 {
-   font-size: $font-size-h2;
-}
+   .flex-grow-2 {
+      flex-grow: 2;
+   }
 
-h3 {
-   font-size: $font-size-h3;
-}
+   .flex-grow-3 {
+      flex-grow: 3;
+   }
 
-h4 {
-   font-size: $font-size-h4;
-}
+   .flex-grow-4 {
+      flex-grow: 4;
+   }
+
 
-h5 {
-   font-size: $font-size-h5;
-}
+   .margin-top-0 {
+      margin-top: 0;
+   }
+
+
+   .as-box {
+      background: base('assets/box-checked.png') left center no-repeat;
+      background-size: 1em;
+   }
+
+
+
+   .as-bullet {
+      background: base('assets/bullet.png') left center no-repeat;
+      background-size: 1.25em;
+   }
+
+
+   input[type=radio],
+   input[type=checkbox] {
+      opacity: 0;
+      width: 1.25em;
+      height: 1.25em;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      margin-right: -1.25em;
+      cursor: pointer;
+      z-index: 1;
+   }
+
+   // when 0 is not selected, move to top so we can unselect all
+   input[type=radio][value="0"]:not(:checked) {
+      z-index: 9;
+   }
+
+   input[type=radio]+.as-bullet {
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      // on state
+      opacity: 1;
+   }
+
+   input[type=radio]:checked~input[type=radio]+.as-bullet {
+      // off state
+      opacity: .5;
+   }
+
+   input[type=radio]+.as-box {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-right: 2px;
+      // on state
+      background: base('assets/box-checked.png') left center no-repeat;
+      background-size: 1em;
+   }
+
+   input[type=radio]:checked+.as-box {
+      // on state
+      background: base('assets/box-checked.png') left center no-repeat;
+      background-size: 1em;
+   }
+
+   input[type=radio]:checked~input[type=radio]+.as-box {
+      // off state
+      background: base('assets/box-empty.png') left center no-repeat;
+      background-size: 1em;
+   }
+
+
+   input[type=checkbox]+.as-diamond {
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      background: base('assets/diamond-empty.png') left center no-repeat;
+      background-size: 1em;
+   }
+
+   input[type=checkbox]:checked+.as-diamond {
+      background: base('assets/diamond-checked.png') left center no-repeat;
+      background-size: 1em;
+   }
+
+
+   input[type=checkbox]+.as-triangle-down {
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      background: base('assets/triangle-down-empty.png') left center no-repeat;
+      background-size: 1.25em;
+   }
+
+   input[type=checkbox]:checked+.as-triangle-down {
+      background: base('assets/triangle-down-checked.png') left center no-repeat;
+      background-size: 1.25em;
+   }
+
+   input[type=checkbox]+.as-triangle-up {
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      background: base('assets/triangle-up-empty.png') left center no-repeat;
+      background-size: 1.25em;
+   }
+
+   input[type=checkbox]:checked+.as-triangle-up {
+      background: base('assets/triangle-up-checked.png') left center no-repeat;
+      background-size: 1.25em;
+   }
+
+
+   input[type=number] {
+      text-align: center;
+      width: 1.5em;
+      -moz-appearance: textfield;
+   }
+
+   input[type=number]::-webkit-inner-spin-button,
+   input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0;
+   }
+
+
+
+   label {
+      font-family: "BigTime";
+      font-size: $font-size-h4;
+      color: $secondary-color;
+      font-weight: normal;
+   }
+
+   p {
+      line-height: 1.45;
+   }
+
+
+   input {
+      @extend .font-branding;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $primary-color;
+   }
+
+
+   textarea {
+
+      font-size: $font-size-h6;
+      font-family: "Branding";
+      font-weight: 500;
+      font-feature-settings: "onum"on;
+
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $primary-color;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      font-family: "Bigtime";
+      font-weight: normal;
+      color: $secondary-color;
+   }
+
+
+   h1 {
+      font-size: $font-size-h1;
+   }
+
+   h2 {
+      font-size: $font-size-h2;
+   }
+
+   h3 {
+      font-size: $font-size-h3;
+   }
+
+   h4 {
+      font-size: $font-size-h4;
+   }
+
+   h5 {
+      font-size: $font-size-h5;
+   }
+
+   h6 {
+      font-size: $font-size-h6;
+   }
 
-h6 {
-   font-size: $font-size-h6;
 }
-
-// }

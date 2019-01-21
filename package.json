@@ -28,7 +28,5 @@
     "node-sass": "^4.11.0",
     "gulp-sass-variables": "^1.2.0"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
