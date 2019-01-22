@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'base';
 
 @font-face {
    font-family: 'BigTime';
@@ -6,7 +6,6 @@
    font-weight: 400;
    src: base('fonts/BigTime-Regular.woff2') format('woff2');
 }
-
 
 @font-face {
    font-family: 'Branding';

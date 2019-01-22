@@ -1,8 +1,0 @@
-$env : 'development' !default;
-$base: '' !default;
-
-@debug("environment is "+ $env + " and base is "+ $base);
-
-@function base($url) {
-   @return url($base + $url);
-}
