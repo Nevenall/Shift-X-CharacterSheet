@@ -1,8 +1,6 @@
 @import 'base';
 @import 'fonts';
 
-
-
 .charsheet {
    min-width: 900px;
 
@@ -16,7 +14,7 @@
    color: $primary-color;
    background-color: $background-color;
 
-   display: grid;
+   display: grid !important;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto;
    grid-template-areas: "header header header"
@@ -100,9 +98,10 @@
       border: none;
    }
 
-
    &-border-bottom {
       border: none;
+      border-radius: 0;
+      -webkit-border-radius: 0;
       border-bottom: 1px solid $primary-color;
    }
 
@@ -126,7 +125,6 @@
       justify-self: stretch;
    }
 
-
    &-flex-column {
       display: flex;
       flex-direction: column;
@@ -144,7 +142,6 @@
    &-flex-nowrap {
       flex-wrap: nowrap;
    }
-
 
    &-flex-align-stretch {
       align-items: stretch;
@@ -182,9 +179,6 @@
       width: 100%;
    }
 
-
-
-
    &-width-quarter {
       width: 25%;
    }
@@ -221,30 +215,24 @@
       flex-grow: 4;
    }
 
-
    &-margin-top-0 {
       margin-top: 0;
    }
-
 
    &-as-box {
       background: base('assets/box-checked.png') left center no-repeat;
       background-size: 1em;
    }
 
-
-
    &-as-bullet {
       background: base('assets/bullet.png') left center no-repeat;
       background-size: 1.25em;
    }
-
 }
 
 small {
    @extend .sheet-font-small;
 }
-
 
 input[type=radio],
 input[type=checkbox] {
@@ -274,7 +262,7 @@ input[type=radio]+.sheet-as-bullet {
 
 input[type=radio]:checked~input[type=radio]+.sheet-as-bullet {
    // off state
-   opacity: .5;
+   opacity: .25;
 }
 
 input[type=radio]+.sheet-as-box {
@@ -299,7 +287,6 @@ input[type=radio]:checked~input[type=radio]+.sheet-as-box {
    background-size: 1em;
 }
 
-
 input[type=checkbox]+.sheet-as-diamond {
    display: inline-block;
    width: 1.25em;
@@ -312,7 +299,6 @@ input[type=checkbox]:checked+.sheet-as-diamond {
    background: base('assets/diamond-checked.png') left center no-repeat;
    background-size: 1em;
 }
-
 
 input[type=checkbox]+.sheet-as-triangle-down {
    display: inline-block;
@@ -340,7 +326,6 @@ input[type=checkbox]:checked+.sheet-as-triangle-up {
    background-size: 1.25em;
 }
 
-
 input[type=number] {
    text-align: center;
    width: 1.5em;
@@ -355,8 +340,6 @@ input[type=number]::-webkit-outer-spin-button {
    margin: 0;
 }
 
-
-
 label {
    font-family: "BigTime";
    font-size: $font-size-h4;
@@ -368,25 +351,16 @@ p {
    line-height: 1.45;
 }
 
-
 input {
    @extend .sheet-font-branding;
-   background: transparent;
-   border: none;
-   border-bottom: 1px solid $primary-color;
+   @extend .sheet-border-bottom;
+   width: auto;
 }
 
-
 textarea {
-
+   @extend .sheet-font-branding;
+   @extend .sheet-border-bottom;
    font-size: $font-size-h6;
-   font-family: "Branding";
-   font-weight: 500;
-   font-feature-settings: "onum"on;
-
-   background: transparent;
-   border: none;
-   border-bottom: 1px solid $primary-color;
 }
 
 h1,
@@ -399,7 +373,6 @@ h6 {
    font-weight: normal;
    color: $secondary-color;
 }
-
 
 h1 {
    font-size: $font-size-h1;
