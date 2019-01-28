@@ -3,6 +3,10 @@
 
 .charsheet {
    min-width: 900px;
+   min-height: 525px;
+
+   width: 950px;
+   height: 525px;
 
    font-size: $font-size-body;
    font-family: "Branding";
@@ -20,7 +24,6 @@
    grid-template-areas: "header header header"
       "left middle right";
 }
-
 
 
 .sheet {
@@ -73,6 +76,18 @@
       // todo - Adjust line height?
       font-weight: 400;
       font-size: $font-size-small;
+   }
+
+
+
+   input+&-show-on-focus {
+      flex: 0;
+      overflow: hidden;
+      transition: flex .5s ease-in;
+   }
+
+   input:focus+&-show-on-focus {
+      flex: 1;
    }
 
 
