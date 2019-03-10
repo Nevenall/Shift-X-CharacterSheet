@@ -17,16 +17,15 @@
   },
   "homepage": "https://github.com/Nevenall/Shift-X-CharacterSheet#readme",
   "dependencies": {
-    "@types/gulp": "^4.0.5",
-    "@types/node-sass": "^3.10.32",
+    "@types/gulp": "^4.0.6",
+    "@types/node-sass": "^4.11.0",
+    "browser-sync": "^2.26.3",
     "delete": "^1.1.0",
-    "express": "^4.16.4",
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-tap": "^1.0.1",
-    "handlebars": "^4.0.12",
-    "node-sass": "^4.11.0",
-    "gulp-sass-variables": "^1.2.0"
+    "gulp-sass-variables": "^1.2.0",
+    "handlebars": "^4.1.0",
+    "node-sass": "^4.11.0"
   },
   "devDependencies": {}
 }

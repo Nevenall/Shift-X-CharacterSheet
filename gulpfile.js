@@ -10,6 +10,7 @@ const sass = require('gulp-sass')
 sass.compiler = require('node-sass')
 const del = require('delete')
 const vars = require('gulp-sass-variables')
+const sync = require('browser-sync').create()
 
 function asDevelopment(callback) {
    process.env.NODE_ENV = "development"
@@ -58,11 +59,18 @@ function clean(callback) {
 }
 
 
-function watchSource() {
-   watch('src/**', build)
+function watchSource(cb) {
+   sync.init({
+      server: "dist",
+      files: ['dist/**'],
+      open: false
+   })
+   watch('src/**', rebuild)
+   cb()
 }
 
 const build = series(clean, html, css, javascript, fonts, assets)
+const rebuild = series(html, css, javascript, fonts, assets)
 
 exports.build = series(asDevelopment, build)
 exports.watch = series(build, watchSource)
