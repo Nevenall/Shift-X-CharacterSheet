@@ -1,46 +1,81 @@
 @import 'base';
 @import 'fonts';
 
+
+// because we can't use root, this styles the overall char sheet.
 .charsheet {
-   min-width: 900px;
-   min-height: 525px;
-
-   // width: 950px;
-   // height: 525px;
-
-   font-size: $font-size-body;
-   font-family: "Branding";
-   font-weight: 500;
-   font-feature-settings: "onum"on;
-
-   line-height: 1.45;
-
-   color: $primary-color;
-   background-color: $background-color;
+   min-width: 860px;
+   min-height: 560px;
 
    display: grid !important;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: auto;
    grid-template-areas: "header header header"
-      "left middle right";
+      "left middle right"
+      "footer footer footer";
+
+
+   @extend %branding;
+   font-size: $font-size-body;
+   line-height: 1.375;
+
+   color: $primary-color;
+   background-color: $background-color;
+
 }
 
 
+
+
+
+
+// the required parent of all character sheet styles
 .sheet {
 
-   &-font-branding {
-      font-size: $font-size-body;
-      font-family: "Branding";
-      font-weight: 500;
-      font-feature-settings: "onum"on;
+   &-character-name {
+      width: 100%;
+      @extend %bigtime;
+      font-size: $font-size-h1;
+      color: $secondary-color;
+      border: none;
    }
 
+   &-left-column {
+      grid-area: left;
+   }
 
-   &-font-bigtime,
-   &-font-bigtime::placeholder {
-      font-family: "BigTime";
-      line-height: 1.25;
-      text-indent: .125em;
+   &-middle-column {
+      grid-area: middle;
+   }
+
+   &-right-column {
+      grid-area: right;
+   }
+
+   &-hero-details {
+      @extend %flex-row-wrap;
+
+      div {
+         @extend %flex-column-nowrap;
+      }
+
+      small {
+         flex: 0;
+         overflow: hidden;
+         transition: flex .25s ease-in-out;
+      }
+
+      input:focus+small {
+         height: auto;
+         flex: 1;
+      }
+
+   }
+
+   &-consequences {}
+
+   &-relationships {
+      @extend %flex-column-nowrap;
    }
 
 
@@ -72,18 +107,12 @@
       font-size: $font-size-body;
    }
 
-   &-font-small {
-      // todo - Adjust line height?
-      font-weight: 400;
-      font-size: $font-size-small;
-   }
-
 
 
    input+&-show-on-focus {
       flex: 0;
       overflow: hidden;
-      transition: flex .5s ease-in;
+      transition: flex .25s ease-in;
    }
 
    input:focus+&-show-on-focus {
@@ -113,28 +142,24 @@
       border: none;
    }
 
-   &-border-bottom {
-      border: none;
-      border-radius: 0;
-      -webkit-border-radius: 0;
-      border-bottom: 1px solid $primary-color;
-   }
 
-   &-grid-header {
-      grid-area: header;
-   }
 
-   &-grid-left {
-      grid-area: left;
-   }
 
-   &-grid-middle {
-      grid-area: middle;
-   }
+   // &-grid-header {
+   //    grid-area: header;
+   // }
 
-   &-grid-right {
-      grid-area: right;
-   }
+   // &-grid-left {
+   //    grid-area: left;
+   // }
+
+   // &-grid-middle {
+   //    grid-area: middle;
+   // }
+
+   // &-grid-right {
+   //    grid-area: right;
+   // }
 
    &-grid-stretch {
       justify-self: stretch;
@@ -245,8 +270,17 @@
    }
 }
 
+
+header {
+   grid-area: header;
+}
+
+footer {
+   grid-area: footer;
+}
+
 small {
-   @extend .sheet-font-small;
+   @extend %font-small;
 }
 
 input[type=radio],
@@ -356,25 +390,25 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 label {
-   font-family: "BigTime";
+   @extend %bigtime;
    font-size: $font-size-h4;
    color: $secondary-color;
    font-weight: normal;
 }
 
 p {
-   line-height: 1.45;
+   // line-height: 1.45;
 }
 
 input {
-   @extend .sheet-font-branding;
-   @extend .sheet-border-bottom;
+   @extend %branding;
+   @extend %border-bottom;
    width: auto;
 }
 
 textarea {
-   @extend .sheet-font-branding;
-   @extend .sheet-border-bottom;
+   @extend %branding;
+   @extend %border-bottom;
    font-size: $font-size-h6;
 }
 
@@ -384,9 +418,7 @@ h3,
 h4,
 h5,
 h6 {
-   font-family: "League";
-   font-style: italic;
-   font-weight: 700;
+   @extend %bigtime;
    color: $secondary-color;
 }
 

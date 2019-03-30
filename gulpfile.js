@@ -10,6 +10,7 @@ const sass = require('gulp-sass')
 sass.compiler = require('node-sass')
 const del = require('delete')
 const vars = require('gulp-sass-variables')
+const replace = require('gulp-replace')
 const sync = require('browser-sync').create()
 
 function asDevelopment(callback) {
@@ -36,6 +37,14 @@ function css() {
 
 function html() {
    return src('src/**/*.html')
+      .pipe(replace(/class="(.+?)"/g, function(match, p1, offset, string) {
+         if (p1 !== 'charsheet') {
+            var classes = p1.split(' ')
+            return `class="${classes.map(el => 'sheet-' + el).join(' ')}"`
+         } else {
+            return `class="charsheet"`
+         }
+      }))
       .pipe(dest('dist/'))
 }
 
@@ -70,7 +79,7 @@ function watchSource(cb) {
 }
 
 const build = series(clean, html, css, javascript, fonts, assets)
-const rebuild = series(html, css, javascript, fonts, assets)
+const rebuild = series(html, css)
 
 exports.build = series(asDevelopment, build)
 exports.watch = series(build, watchSource)

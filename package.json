@@ -22,9 +22,10 @@
     "browser-sync": "^2.26.3",
     "delete": "^1.1.0",
     "gulp": "^4.0.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-variables": "^1.2.0",
-    "handlebars": "^4.1.0",
+    "handlebars": "^4.1.1",
     "node-sass": "^4.11.0"
   },
   "devDependencies": {}
