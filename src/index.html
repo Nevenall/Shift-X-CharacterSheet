@@ -71,7 +71,7 @@
             <h2>Powers</h2>
             <div class="powerset">
                <input name="attr_powerset-1-name" spellcheck="false" type="text" placeholder="Powerset One" />
-               <textarea name="attr_powerset-1-description" placeholder="a narrative description of this set of powers"></textarea>
+               <textarea name="attr_powerset-1-description" placeholder="a narrative description"></textarea>
                <fieldset class="repeating_powerset-1-powers">
                   <div class="power">
                      <input name="attr_powerset-1-power-name" type="text" spellcheck="false" placeholder="power name." />
@@ -85,7 +85,7 @@
             </div>
             <div class="powerset">
                <input name="attr_powerset-2-name" spellcheck="false" type="text" placeholder="Powerset Two" />
-               <textarea name="attr_powerset-2-description" placeholder="a narrative description of this set of powers"></textarea>
+               <textarea name="attr_powerset-2-description" placeholder="a narrative description"></textarea>
                <fieldset class="repeating_powerset-2-powers">
                   <div class="power">
                      <input name="attr_powerset-2-power-name" type="text" spellcheck="false" placeholder="power name." />
@@ -99,7 +99,7 @@
             </div>
             <div class="powerset">
                <input name="attr_powerset-3-name" spellcheck="false" type="text" placeholder="Powerset Three" />
-               <textarea name="attr_powerset-3-description" placeholder="a narrative description of this set of powers"></textarea>
+               <textarea name="attr_powerset-3-description" placeholder="a narrative description"></textarea>
                <fieldset class="repeating_powerset-3-powers">
                   <div class="power">
                      <input name="attr_powerset-3-power-name" type="text" spellcheck="false" placeholder="power name." />
@@ -116,30 +116,28 @@
             <h2>Abilities</h2>
             <fieldset class="repeating_abilities">
                <div class="ability">
-<!--  -->
+                  <input name="attr_ability-name" spellchecker="false" type="text" placeholder="ability name:" />
+                  <textarea name="attr_ability-description" placeholder="description"></textarea>
                </div>
             </fieldset>
          </div>
-
       </div>
       <div class="right-column">
-         <div data-section="actions">
+         <div class="actions">
             <h2>Actions</h2>
-
-            <div data-section="insight">
-               <div class="flex-row flex-no-wrap flex-align-baseline">
-                  <span class="font-h4 font-bigtime secondary-color width-two-fifths">Insight</span>
-                  <div class="flex-row flex-no-wrap flex-align-center width-one-fifth" data-section="xp-boxes">
-                     <input type="radio" value="0" name="attr_insight_xp" checked />
-                     <input type="radio" value="1" name="attr_insight_xp" /><span class="as-box"></span>
-                     <input type="radio" value="2" name="attr_insight_xp" /><span class="as-box"></span>
-                     <input type="radio" value="3" name="attr_insight_xp" /><span class="as-box"></span>
-                     <input type="radio" value="4" name="attr_insight_xp" /><span class="as-box"></span>
+            <div class="insight">
+               <div class="attribute">
+                  <span>Insight</span>
+                  <div>
+                     <input name="attr_insight_xp" type="radio" value="0" checked />
+                     <input name="attr_insight_xp" type="radio" value="1" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="2" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="3" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="4" /><span class="as-box"></span>
                   </div>
-
                </div>
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="know">
+               <div data-section="know">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_know_value" checked />
                      <input type="radio" value="1" name="attr_know_value" /><span class="as-bullet"></span>
@@ -151,7 +149,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="spy">
+               <div data-section="spy">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_spy_value" checked />
                      <input type="radio" value="1" name="attr_spy_value" /><span class="as-bullet"></span>
@@ -163,7 +161,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="tech">
+               <div data-section="tech">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_tech_value" checked />
                      <input type="radio" value="1" name="attr_tech_value" /><span class="as-bullet"></span>
@@ -175,7 +173,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="trace">
+               <div data-section="trace">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_trace_value" checked />
                      <input type="radio" value="1" name="attr_trace_value" /><span class="as-bullet"></span>
@@ -188,7 +186,7 @@
 
             </div>
             <div data-section="prowess">
-               <div class="flex-row flex-no-wrap flex-align-baseline">
+               <div>
                   <span class="font-h4 font-bigtime secondary-color width-two-fifths">Prowess</span>
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth" data-section="xp-boxes">
                      <input type="radio" value="0" name="attr_prowess_xp" checked />
@@ -200,7 +198,7 @@
 
                </div>
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="acrobatics">
+               <div data-section="acrobatics">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_acrobatics_value" checked />
                      <input type="radio" value="1" name="attr_acrobatics_value" /><span class="as-bullet"></span>
@@ -212,7 +210,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="fight">
+               <div data-section="fight">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_fight_value" checked />
                      <input type="radio" value="1" name="attr_fight_value" /><span class="as-bullet"></span>
@@ -224,7 +222,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="move">
+               <div data-section="move">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_move_value" checked />
                      <input type="radio" value="1" name="attr_move_value" /><span class="as-bullet"></span>
@@ -236,7 +234,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="wreck">
+               <div data-section="wreck">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_wreck_value" checked />
                      <input type="radio" value="1" name="attr_wreck_value" /><span class="as-bullet"></span>
@@ -250,7 +248,7 @@
             </div>
             <div data-section="resolve">
 
-               <div class="flex-row flex-no-wrap flex-align-baseline">
+               <div>
                   <span class="font-h4 font-bigtime secondary-color width-two-fifths">Resolve</span>
 
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth" data-section="xp-boxes">
@@ -263,7 +261,7 @@
 
                </div>
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="inspire">
+               <div data-section="inspire">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_inspire_value" checked />
                      <input type="radio" value="1" name="attr_inspire_value" /><span class="as-bullet"></span>
@@ -275,7 +273,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="menace">
+               <div data-section="menace">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_menace_value" checked />
                      <input type="radio" value="1" name="attr_menace_value" /><span class="as-bullet"></span>
@@ -287,7 +285,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="socialize">
+               <div data-section="socialize">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_socialize_value" checked />
                      <input type="radio" value="1" name="attr_socialize_value" /><span class="as-bullet"></span>
@@ -299,7 +297,7 @@
                </div>
 
 
-               <div class="flex-row flex-no-wrap flex-align-baseline" data-section="sway">
+               <div data-section="sway">
                   <div class="flex-row flex-no-wrap flex-align-center width-one-fifth">
                      <input type="radio" value="0" name="attr_sway_value" checked />
                      <input type="radio" value="1" name="attr_sway_value" /><span class="as-bullet"></span>
