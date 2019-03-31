@@ -25,10 +25,6 @@
 }
 
 
-
-
-
-
 // the required parent of all character sheet styles
 .sheet {
 
@@ -57,6 +53,11 @@
 
       div {
          @extend %flex-column-nowrap;
+         width: 50%;
+      }
+
+      div:last-child {
+         width: 100%;
       }
 
       small {
@@ -70,194 +71,119 @@
          flex: 1;
       }
 
+      label {
+         @extend %bigtime;
+         font-size: $font-size-h3;
+         color: $secondary-color;
+      }
+
    }
 
-   &-consequences {}
+   &-consequences {
+      // fillout the html and css for consequences.
+      // includes a clock! which is exciting.
+   }
 
    &-relationships {
       @extend %flex-column-nowrap;
    }
 
-
-   &-font-bold {
-      font-weight: 700;
-   }
-
-   &-font-h1 {
-      font-size: $font-size-h1;
-   }
-
-   &-font-h2 {
-      font-size: $font-size-h2;
-   }
-
-   &-font-h3 {
-      font-size: $font-size-h3;
-   }
-
-   &-font-h4 {
-      font-size: $font-size-h4;
-   }
-
-   &-font-h5 {
-      font-size: $font-size-h5;
-   }
-
-   &-font-body {
-      font-size: $font-size-body;
-   }
-
-
-
-   input+&-show-on-focus {
-      flex: 0;
-      overflow: hidden;
-      transition: flex .25s ease-in;
-   }
-
-   input:focus+&-show-on-focus {
-      flex: 1;
-   }
-
-
-   &-primary-color {
-      color: $primary-color;
-   }
-
-   &-hover\:primary-color:hover {
-      background-color: $primary-color;
-   }
-
-
-   &-secondary-color {
-      color: $secondary-color;
-   }
-
-   &-hover\:secondary-color:hover {
-      background-color: $secondary-color;
-   }
-
-   &-border-none {
-      background: transparent;
-      border: none;
-   }
-
-
-
-
-   // &-grid-header {
-   //    grid-area: header;
-   // }
-
-   // &-grid-left {
-   //    grid-area: left;
-   // }
-
-   // &-grid-middle {
-   //    grid-area: middle;
-   // }
-
-   // &-grid-right {
-   //    grid-area: right;
-   // }
-
-   &-grid-stretch {
-      justify-self: stretch;
-   }
-
-   &-flex-column {
-      display: flex;
-      flex-direction: column;
-   }
-
-   &-flex-row {
-      display: flex;
-      flex-direction: row;
-   }
-
-   &-flex-wrap {
-      flex-wrap: wrap;
-   }
-
-   &-flex-nowrap {
-      flex-wrap: nowrap;
-   }
-
-   &-flex-align-stretch {
-      align-items: stretch;
-   }
-
-   &-flex-align-center {
+   &-relationship {
+      @extend %flex-row-nowrap;
       align-items: center;
+
+      input {
+         width: 50%;
+         flex-grow: 1;
+         @extend %border-none;
+         @extend %bigtime;
+         color: $secondary-color;
+         font-size: $font-size-h3;
+      }
+
+      div {
+         @extend %flex-row-nowrap;
+         align-items: center;
+      }
+
    }
 
-   &-flex-align-baseline {
+   &-powersets {
+      @extend %flex-column-nowrap;
+
+      &>h2 {
+         margin-top: 0;
+      }
+   }
+
+   &-powerset {
+      &>input {
+         @extend %bigtime;
+         color: $secondary-color;
+         font-size: $font-size-h3;
+         @extend %border-none;
+         width: 100%;
+      }
+
+      &>textarea {
+         width: 100%;
+         @extend %border-none;
+      }
+
+      input[name$=limit] {
+         @extend %branding;
+         @extend %border-none;
+         width: 100%;
+      }
+
+      input[name$=limit]::placeholder {
+         @extend %branding;
+      }
+
+   }
+
+   &-power {
+      @extend %branding;
+      @extend %flex-row-wrap;
       align-items: baseline;
+
+      ::placeholder {
+         @extend %branding;
+      }
+
+      input {
+         @extend %border-none;
+      }
+
+      input:first-of-type::placeholder {
+         font-weight: bold;
+      }
+
+      input:first-of-type {
+         // power name
+         font-weight: bold;
+         width: 33%;
+         flex-grow: 1;
+      }
+
+      input:last-of-type {
+         // power description
+         width: 50%;
+         flex-grow: 2;
+      }
+
+
+
+
+
    }
 
-   &-flex-self-center {
-      align-self: center;
-   }
 
-   &-width-one-fifth {
-      width: 20%;
-   }
 
-   &-width-two-fifths {
-      width: 40%;
-   }
 
-   &-width-three-fifths {
-      width: 60%;
-   }
 
-   &-width-four-fifths {
-      width: 80%;
-   }
 
-   &-width-five-fifths {
-      width: 100%;
-   }
 
-   &-width-quarter {
-      width: 25%;
-   }
-
-   &-width-half {
-      width: 50%;
-   }
-
-   &-width-full {
-      width: 100%;
-   }
-
-   &-flex-50 {
-      flex-basis: 50%;
-   }
-
-   &-flex-100 {
-      flex-basis: 100%;
-   }
-
-   &-flex-grow-1 {
-      flex-grow: 1;
-   }
-
-   &-flex-grow-2 {
-      flex-grow: 2;
-   }
-
-   &-flex-grow-3 {
-      flex-grow: 3;
-   }
-
-   &-flex-grow-4 {
-      flex-grow: 4;
-   }
-
-   &-margin-top-0 {
-      margin-top: 0;
-   }
 
    &-as-box {
       background: base('assets/box-checked.png') left center no-repeat;
@@ -268,6 +194,18 @@
       background: base('assets/bullet.png') left center no-repeat;
       background-size: 1.25em;
    }
+
+   &-as-triangle-up {
+      background: base('assets/triangle-up-checked.png') left center no-repeat;
+      background-size: 1.25em;
+   }
+
+   &-as-triangle-down {
+      background: base('assets/triangle-down-checked.png') left center no-repeat;
+      background-size: 1.25em;
+   }
+
+
 }
 
 
@@ -281,6 +219,15 @@ footer {
 
 small {
    @extend %font-small;
+}
+
+:focus {
+   outline: none;
+}
+
+input::placeholder {
+   @extend %bigtime;
+   vertical-align: middle;
 }
 
 input[type=radio],
@@ -301,40 +248,71 @@ input[type=radio][value="0"]:not(:checked) {
    z-index: 9;
 }
 
+
 input[type=radio]+.sheet-as-bullet {
    display: inline-block;
    width: 1.25em;
    height: 1.25em;
-   // on state
+   // "on" state is default 
    opacity: 1;
 }
 
 input[type=radio]:checked~input[type=radio]+.sheet-as-bullet {
-   // off state
+   // "off" state turns on after checked to end
    opacity: .25;
 }
+
 
 input[type=radio]+.sheet-as-box {
    display: inline-block;
    width: 1em;
    height: 1em;
    margin-right: 2px;
-   // on state
-   background: base('assets/box-checked.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=radio]:checked+.sheet-as-box {
-   // on state
+   // "on" state is the default
    background: base('assets/box-checked.png') left center no-repeat;
    background-size: 1em;
 }
 
 input[type=radio]:checked~input[type=radio]+.sheet-as-box {
-   // off state
+   // "off" state is active for consecutive radios after checked
    background: base('assets/box-empty.png') left center no-repeat;
    background-size: 1em;
 }
+
+
+input[type=radio]+.sheet-as-triangle-up {
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+   margin-right: 2px;
+   // "on" state is the default
+   background: base('assets/triangle-up-checked.png') left center no-repeat;
+   background-size: 1em;
+}
+
+input[type=radio]:checked~input[type=radio]+.sheet-as-triangle-up {
+   // "off" state is active for consecutive radios after checked
+   background: base('assets/triangle-up-empty.png') left center no-repeat;
+   background-size: 1em;
+}
+
+
+input[type=radio]+.sheet-as-triangle-down {
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+   margin-right: 2px;
+   // "on" state is the default
+   background: base('assets/triangle-down-checked.png') left center no-repeat;
+   background-size: 1em;
+}
+
+input[type=radio]:checked~input[type=radio]+.sheet-as-triangle-down {
+   // "off" state is active for consecutive radios after checked
+   background: base('assets/triangle-down-empty.png') left center no-repeat;
+   background-size: 1em;
+}
+
 
 input[type=checkbox]+.sheet-as-diamond {
    display: inline-block;

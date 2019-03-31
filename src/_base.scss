@@ -38,6 +38,11 @@ $font-size-body: 1rem;
    font-feature-settings: "onum"on;
 }
 
+%border-none {
+   background: transparent;
+   border: none;
+}
+
 %border-bottom {
    border: none;
    border-radius: 0;
@@ -58,6 +63,11 @@ $font-size-body: 1rem;
 %flex-row-wrap {
    display: flex;
    flex-flow: row wrap;
+}
+
+%flex-row-nowrap {
+   display: flex;
+   flex-flow: row nowrap;
 }
 
 %font-small {
