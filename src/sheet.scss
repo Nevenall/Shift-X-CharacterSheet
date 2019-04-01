@@ -79,33 +79,30 @@
 
    }
 
-   &-consequences {
-      div:first-of-type {
+   &-consequences {}
+
+   &-stress {
+      @extend %flex-row-wrap;
+      align-items: center;
+
+      label {
+         margin-right: 1em;
+      }
+
+      div {
          @extend %flex-row-nowrap;
          align-items: center;
-
-         label {
-            margin-right: 1em;
-         }
-
-         div {
-            @extend %flex-row-nowrap;
-            align-items: center;
-         }
       }
    }
 
    &-harm {
-
-      span {
-         // background-color: lightgray;
-         @extend %border-bottom;
-      }
-
+      @extend %flex-column-nowrap;
 
 
       input {
          text-align: center;
+         @extend %border-none;
+         flex-grow: 1;
       }
 
       input::placeholder {
@@ -115,19 +112,24 @@
 
       div {
          @extend %flex-row-nowrap;
-         align-items: stretch;
+         align-items: center;
+         @extend %border-bottom;
 
          span:first-of-type {
-            width: 5%;
+            font-feature-settings: "tnum"on;
+            width: 3ch;
+            // width: 5%;
+            // flex-grow: .05;
+            text-align: right;
          }
 
          span:last-of-type {
-            width: 15%;
+            width: 7ch;
+            // width: 15%;
+            // flex-grow:.15;
          }
 
-         input {
-            flex-grow: 1;
-         }
+
       }
 
 
