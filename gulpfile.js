@@ -38,7 +38,7 @@ function css() {
 function html() {
    return src('src/**/*.html')
       .pipe(replace(/class="(.+?)"/g, function(match, p1, offset, string) {
-         if (p1 !== 'charsheet') {
+         if (p1 !== 'charsheet'|| !p1.startsWith('repeating')) {
             var classes = p1.split(' ')
             return `class="${classes.map(el => 'sheet-' + el).join(' ')}"`
          } else {
