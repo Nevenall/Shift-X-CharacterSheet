@@ -80,9 +80,61 @@
    }
 
    &-consequences {
-      // fillout the html and css for consequences.
-      // includes a clock! which is exciting.
+      div:first-of-type {
+         @extend %flex-row-nowrap;
+         align-items: center;
+
+         label {
+            margin-right: 1em;
+         }
+
+         div {
+            @extend %flex-row-nowrap;
+            align-items: center;
+         }
+      }
    }
+
+   &-harm {
+
+      span {
+         // background-color: lightgray;
+         @extend %border-bottom;
+      }
+
+
+
+      input {
+         text-align: center;
+      }
+
+      input::placeholder {
+         @extend %branding;
+         text-align: center;
+      }
+
+      div {
+         @extend %flex-row-nowrap;
+         align-items: stretch;
+
+         span:first-of-type {
+            width: 5%;
+         }
+
+         span:last-of-type {
+            width: 15%;
+         }
+
+         input {
+            flex-grow: 1;
+         }
+      }
+
+
+
+   }
+
+
 
    &-relationships {
       @extend %flex-column-nowrap;
@@ -92,7 +144,7 @@
       @extend %flex-row-nowrap;
       align-items: center;
 
-      input {
+      input[type=text] {
          width: 50%;
          flex-grow: 1;
          @extend %border-none;
@@ -100,6 +152,7 @@
          color: $secondary-color;
          font-size: $font-size-h3;
       }
+
 
       div {
          @extend %flex-row-nowrap;
@@ -111,13 +164,26 @@
    &-powersets {
       @extend %flex-column-nowrap;
 
-      &>h2 {
-         margin-top: 0;
+
+      div:first-of-type {
+         @extend %flex-row-nowrap;
+         align-items: center;
+
+         h2 {
+            margin: 0;
+            flex-grow: 1;
+         }
+
+         div {
+            @extend %flex-row-nowrap;
+         }
+
       }
+
    }
 
    &-powerset {
-      &>input {
+      &>input[type=text] {
          @extend %bigtime;
          color: $secondary-color;
          font-size: $font-size-h3;
@@ -182,6 +248,20 @@
       }
    }
 
+
+   &-abilities {
+      div:first-of-type {
+         @extend %flex-row-nowrap;
+         align-items: center;
+         margin-top: 1.5em;
+
+         h2 {
+            margin: 0;
+            flex-grow: 1;
+         }
+      }
+   }
+
    &-ability {
       @extend %flex-row-nowrap;
       align-items: center;
@@ -210,25 +290,59 @@
       }
    }
 
+
+   &-actions {
+      @extend %flex-column-nowrap;
+
+      h2:first-of-type {
+         margin-top: 0;
+      }
+   }
+
    &-attribute {
       @extend %flex-row-nowrap;
-      align-items: baseline;
+      align-items: center;
 
-      span {
+      label {
          @extend %bigtime;
          color: $secondary-color;
          font-size: $font-size-h3;
-         margin-right: 1em;
+         flex-grow: 1;
       }
 
       div {
          @extend %flex-row-nowrap;
-         align-items: baseline;
-
+         align-items: center;
       }
    }
 
+   &-action {
+      @extend %flex-row-nowrap;
+      align-items: center;
 
+      label {
+         @extend %bigtime;
+         font-size: $font-size-h4;
+         color: $primary-color;
+         margin-left: 1em;
+      }
+
+      div {
+         @extend %flex-row-nowrap;
+         align-items: center;
+      }
+   }
+
+   &-gear {
+      textarea {
+         @extend %border-none;
+         width: 100%;
+      }
+
+      ::placeholder {
+         @extend %branding;
+      }
+   }
 
 
 
@@ -240,17 +354,17 @@
 
    &-as-bullet {
       background: base('assets/bullet.png') left center no-repeat;
-      background-size: 1.25em;
+      background-size: 1em;
    }
 
    &-as-triangle-up {
       background: base('assets/triangle-up-checked.png') left center no-repeat;
-      background-size: 1.25em;
+      background-size: 1em;
    }
 
    &-as-triangle-down {
       background: base('assets/triangle-down-checked.png') left center no-repeat;
-      background-size: 1.25em;
+      background-size: 1em;
    }
 
 
@@ -284,12 +398,12 @@ input {
 input[type=radio],
 input[type=checkbox] {
    opacity: 0;
-   width: 1.25em;
-   height: 1.25em;
+   width: 1em;
+   height: 1em;
    position: relative;
    padding: 0;
    margin: 0;
-   margin-right: -1.25em;
+   margin-right: -1em;
    cursor: pointer;
    z-index: 1;
 }
@@ -302,8 +416,8 @@ input[type=radio][value="0"]:not(:checked) {
 
 input[type=radio]+.sheet-as-bullet {
    display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
+   width: 1em;
+   height: 1em;
    // "on" state is default 
    opacity: 1;
 }
@@ -367,8 +481,8 @@ input[type=radio]:checked~input[type=radio]+.sheet-as-triangle-down {
 
 input[type=checkbox]+.sheet-as-diamond {
    display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
+   width: 1em;
+   height: 1em;
    background: base('assets/diamond-empty.png') left center no-repeat;
    background-size: 1em;
 }
@@ -380,28 +494,28 @@ input[type=checkbox]:checked+.sheet-as-diamond {
 
 input[type=checkbox]+.sheet-as-triangle-down {
    display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
+   width: 1em;
+   height: 1em;
    background: base('assets/triangle-down-empty.png') left center no-repeat;
-   background-size: 1.25em;
+   background-size: 1em;
 }
 
 input[type=checkbox]:checked+.sheet-as-triangle-down {
    background: base('assets/triangle-down-checked.png') left center no-repeat;
-   background-size: 1.25em;
+   background-size: 1em;
 }
 
 input[type=checkbox]+.sheet-as-triangle-up {
    display: inline-block;
-   width: 1.25em;
-   height: 1.25em;
+   width: 1em;
+   height: 1em;
    background: base('assets/triangle-up-empty.png') left center no-repeat;
-   background-size: 1.25em;
+   background-size: 1em;
 }
 
 input[type=checkbox]:checked+.sheet-as-triangle-up {
    background: base('assets/triangle-up-checked.png') left center no-repeat;
-   background-size: 1.25em;
+   background-size: 1em;
 }
 
 input[type=number] {
