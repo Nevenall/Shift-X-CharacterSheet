@@ -38,11 +38,12 @@ function css() {
 function html() {
    return src('src/**/*.html')
       .pipe(replace(/class="(.+?)"/g, function(match, p1, offset, string) {
-         if (p1 !== 'charsheet'|| !p1.startsWith('repeating')) {
+
+         if (p1 === 'charsheet' || p1.startsWith('repeating')) {
+            return `class="${p1}"`
+         } else {
             var classes = p1.split(' ')
             return `class="${classes.map(el => 'sheet-' + el).join(' ')}"`
-         } else {
-            return `class="charsheet"`
          }
       }))
       .pipe(dest('dist/'))
