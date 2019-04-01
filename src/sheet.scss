@@ -97,7 +97,7 @@
 
    &-harm {
       @extend %flex-column-nowrap;
-
+      margin-top:.5em;
 
       input {
          text-align: center;
@@ -128,12 +128,13 @@
             // width: 15%;
             // flex-grow:.15;
          }
-
-
       }
+   }
 
-
-
+   &-healing {
+      @extend %flex-row-nowrap;
+      align-items: center;
+      margin-top:.5em;
    }
 
 
