@@ -3,30 +3,37 @@
 
 
 // because we can't use root, this styles the overall char sheet.
-.charsheet {
-   min-width: 860px;
-   min-height: 560px;
 
-   display: grid !important;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: auto;
-   grid-template-areas: "header header header"
-      "left middle right"
-      "footer footer footer";
-
-
-   @extend %branding;
-   font-size: $font-size-body;
-   line-height: 1.375;
-
-   color: $primary-color;
-   background-color: $background-color;
-
-}
 
 
 // the required parent of all character sheet styles
 .sheet {
+
+
+   &-root {
+
+      // we need a root element for our sheet
+      // because this stuff is what is gridding up the char mancer
+
+      min-width: 860px;
+      min-height: 560px;
+
+      display: grid !important;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "header header header"
+         "left middle right"
+         "footer footer footer";
+
+
+      @extend %branding;
+      font-size: $font-size-body;
+      line-height: 1.375;
+
+      color: $primary-color;
+      background-color: $background-color;
+
+   }
 
    &-character-name {
       width: 100%;
@@ -98,7 +105,7 @@
 
    &-harm {
       @extend %flex-column-nowrap;
-      margin-top:.5em;
+      margin-top: .5em;
 
       input {
          text-align: center;
@@ -135,7 +142,7 @@
    &-healing {
       @extend %flex-row-nowrap;
       align-items: center;
-      margin-top:.5em;
+      margin-top: .5em;
    }
 
 

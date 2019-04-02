@@ -9,7 +9,7 @@
 </head>
 
 <body>
-   <div class="charsheet">
+   <div class="root">
       <input name="attr_character_name" class="character-name" spellcheck="false" type="text" placeholder="Hero Name" />
       <div class="left-column">
          <div class="hero-details">
@@ -42,24 +42,24 @@
             <div class="stress">
                <label>Stress</label>
                <div>
-                  <input name="attr_stress-value" type="radio" value="0" checked />
-                  <input name="attr_stress-value" type="radio" value="1" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="2" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="3" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="4" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="5" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="6" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="7" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="8" /><span class="as-box"></span>
-                  <input name="attr_stress-value" type="radio" value="9" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="0" checked />
+                  <input name="attr_stress_total" type="radio" value="1" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="2" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="3" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="4" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="5" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="6" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="7" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="8" /><span class="as-box"></span>
+                  <input name="attr_stress_total" type="radio" value="9" /><span class="as-box"></span>
                </div>
                <label>Trauma</label>
                <div>
-                  <input name="attr_trauma-value" type="radio" value="0" checked />
-                  <input name="attr_trauma-value" type="radio" value="1" /><span class="as-box"></span>
-                  <input name="attr_trauma-value" type="radio" value="2" /><span class="as-box"></span>
-                  <input name="attr_trauma-value" type="radio" value="3" /><span class="as-box"></span>
-                  <input name="attr_trauma-value" type="radio" value="4" /><span class="as-box"></span>
+                  <input name="attr_trauma_total" type="radio" value="0" checked />
+                  <input name="attr_trauma_total" type="radio" value="1" /><span class="as-box"></span>
+                  <input name="attr_trauma_total" type="radio" value="2" /><span class="as-box"></span>
+                  <input name="attr_trauma_total" type="radio" value="3" /><span class="as-box"></span>
+                  <input name="attr_trauma_total" type="radio" value="4" /><span class="as-box"></span>
                </div>
                <small>addicted–haunted–isolated–obsessed–paranoid–reckless–unstable–vicious</small>
             </div>
@@ -67,30 +67,30 @@
                <label>Harm</label>
                <div>
                   <span>3</span>
-                  <input name="attr_harm-3" type="text" placeholder="severe harm" />
+                  <input name="attr_harm_severe" type="text" placeholder="severe harm" />
                   <span>Need Help</span>
                </div>
                <div>
                   <span>2</span>
-                  <input name="attr_harm-2-one" type="text" placeholder="moderate harm" />
-                  <input name="attr_harm-2-two" type="text" placeholder="moderate harm" />
+                  <input name="attr_harm_moderate_1" type="text" placeholder="moderate harm" />
+                  <input name="attr_harm_moderate_2" type="text" placeholder="moderate harm" />
                   <span>-1d</span>
                </div>
                <div>
                   <span>1</span>
-                  <input name="attr_harm-1-one" type="text" placeholder="minor harm" />
-                  <input name="attr_harm-1-two" type="text" placeholder="minor harm" />
+                  <input name="attr_harm_minor_1" type="text" placeholder="minor harm" />
+                  <input name="attr_harm_minor_2" type="text" placeholder="minor harm" />
                   <span>Reduced Effect</span>
                </div>
             </div>
             <div class="healing">
                <label>Healing</label>
                <div>
-                  <input name="attr_healing-clock-value" type="radio" value="0" checked />
-                  <input name="attr_healing-clock-value" type="radio" value="1" /><span class="as-box"></span>
-                  <input name="attr_healing-clock-value" type="radio" value="2" /><span class="as-box"></span>
-                  <input name="attr_healing-clock-value" type="radio" value="3" /><span class="as-box"></span>
-                  <input name="attr_healing-clock-value" type="radio" value="4" /><span class="as-box"></span>
+                  <input name="attr_healing-clock" type="radio" value="0" checked />
+                  <input name="attr_healing-clock" type="radio" value="1" /><span class="as-box"></span>
+                  <input name="attr_healing-clock" type="radio" value="2" /><span class="as-box"></span>
+                  <input name="attr_healing-clock" type="radio" value="3" /><span class="as-box"></span>
+                  <input name="attr_healing-clock" type="radio" value="4" /><span class="as-box"></span>
                </div>
             </div>
          </div>
@@ -100,18 +100,18 @@
                <div class="relationship">
                   <input spellcheck="false" type="text" placeholder="Character Name" name="attr_relationship-name" />
                   <div>
-                     <input name="attr_relationship-xp" type="radio" value="0" checked />
-                     <input name="attr_relationship-xp" type="radio" value="1" /><span class="as-box"></span>
-                     <input name="attr_relationship-xp" type="radio" value="2" /><span class="as-box"></span>
-                     <input name="attr_relationship-xp" type="radio" value="3" /><span class="as-box"></span>
-                     <input name="attr_relationship-xp" type="radio" value="4" /><span class="as-box"></span>
+                     <input name="attr_relationship_xp" type="radio" value="0" checked />
+                     <input name="attr_relationship_xp" type="radio" value="1" /><span class="as-box"></span>
+                     <input name="attr_relationship_xp" type="radio" value="2" /><span class="as-box"></span>
+                     <input name="attr_relationship_xp" type="radio" value="3" /><span class="as-box"></span>
+                     <input name="attr_relationship_xp" type="radio" value="4" /><span class="as-box"></span>
                   </div>
                   <div>
-                     <input name="attr_relationship-value" type="radio" value="0" checked />
-                     <input name="attr_relationship-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_relationship-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_relationship-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_relationship-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_relationship_value" type="radio" value="0" checked />
+                     <input name="attr_relationship_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_relationship_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_relationship_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_relationship_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                </div>
             </fieldset>
@@ -122,55 +122,55 @@
             <div>
                <h2>Powers</h2>
                <div>
-                  <input name="attr_powers-xp" type="radio" value="0" checked />
-                  <input name="attr_powers-xp" type="radio" value="1" /><span class="as-box"></span>
-                  <input name="attr_powers-xp" type="radio" value="2" /><span class="as-box"></span>
-                  <input name="attr_powers-xp" type="radio" value="3" /><span class="as-box"></span>
-                  <input name="attr_powers-xp" type="radio" value="4" /><span class="as-box"></span>
-                  <input name="attr_powers-xp" type="radio" value="5" /><span class="as-box"></span>
-                  <input name="attr_powers-xp" type="radio" value="6" /><span class="as-box"></span>
+                  <input name="attr_powers_xp" type="radio" value="0" checked />
+                  <input name="attr_powers_xp" type="radio" value="1" /><span class="as-box"></span>
+                  <input name="attr_powers_xp" type="radio" value="2" /><span class="as-box"></span>
+                  <input name="attr_powers_xp" type="radio" value="3" /><span class="as-box"></span>
+                  <input name="attr_powers_xp" type="radio" value="4" /><span class="as-box"></span>
+                  <input name="attr_powers_xp" type="radio" value="5" /><span class="as-box"></span>
+                  <input name="attr_powers_xp" type="radio" value="6" /><span class="as-box"></span>
                </div>
             </div>
             <div class="powerset">
-               <input name="attr_powerset-1-name" spellcheck="false" type="text" placeholder="Powerset One" />
-               <textarea name="attr_powerset-1-description" placeholder="a narrative description"></textarea>
+               <input name="attr_powerset_1_name" spellcheck="false" type="text" placeholder="Powerset One" />
+               <textarea name="attr_powerset_1_description" placeholder="a narrative description"></textarea>
                <fieldset class="repeating_powerset-1-powers">
                   <div class="power">
-                     <input name="attr_powerset-1-power-name" type="text" spellcheck="false" placeholder="power name." />
-                     <input name="attr_powerset-1-threat" type="number" placeholder="0" />
-                     <input name="attr_powerset-1-power-description" type="text" spellcheck="true" placeholder="power description" />
+                     <input name="attr_powerset_1_power_name" type="text" spellcheck="false" placeholder="power name." />
+                     <input name="attr_powerset_1_threat" type="number" placeholder="0" />
+                     <input name="attr_powerset_1_power_description" type="text" spellcheck="true" placeholder="power description" />
                   </div>
                </fieldset>
                <fieldset class="repeating_powerset-1-limits">
-                  <input name="attr_powerset-1-limit" type="text" spellcheck="true" placeholder="limit" />
+                  <input name="attr_powerset_1_limit" type="text" spellcheck="true" placeholder="limit" />
                </fieldset>
             </div>
             <div class="powerset">
-               <input name="attr_powerset-2-name" spellcheck="false" type="text" placeholder="Powerset Two" />
-               <textarea name="attr_powerset-2-description" placeholder="a narrative description"></textarea>
+               <input name="attr_powerset_2_name" spellcheck="false" type="text" placeholder="Powerset Two" />
+               <textarea name="attr_powerset_2_description" placeholder="a narrative description"></textarea>
                <fieldset class="repeating_powerset-2-powers">
                   <div class="power">
-                     <input name="attr_powerset-2-power-name" type="text" spellcheck="false" placeholder="power name." />
-                     <input name="attr_powerset-2-threat" type="number" placeholder="0" />
-                     <input name="attr_powerset-2-power-description" type="text" spellcheck="true" placeholder="power description" />
+                     <input name="attr_powerset_2_power_name" type="text" spellcheck="false" placeholder="power name." />
+                     <input name="attr_powerset_2_threat" type="number" placeholder="0" />
+                     <input name="attr_powerset_2_power_description" type="text" spellcheck="true" placeholder="power description" />
                   </div>
                </fieldset>
                <fieldset class="repeating_powerset-2-limits">
-                  <input name="attr_powerset-2-limit" type="text" spellcheck="true" placeholder="limit" />
+                  <input name="attr_powerset_2_limit" type="text" spellcheck="true" placeholder="limit" />
                </fieldset>
             </div>
             <div class="powerset">
-               <input name="attr_powerset-3-name" spellcheck="false" type="text" placeholder="Powerset Three" />
-               <textarea name="attr_powerset-3-description" placeholder="a narrative description"></textarea>
+               <input name="attr_powerset_3_name" spellcheck="false" type="text" placeholder="Powerset Three" />
+               <textarea name="attr_powerset_3_description" placeholder="a narrative description"></textarea>
                <fieldset class="repeating_powerset-3-powers">
                   <div class="power">
-                     <input name="attr_powerset-3-power-name" type="text" spellcheck="false" placeholder="power name." />
-                     <input name="attr_powerset-3-threat" type="number" placeholder="0" />
-                     <input name="attr_powerset-3-power-description" type="text" spellcheck="true" placeholder="power description" />
+                     <input name="attr_powerset_3_power_name" type="text" spellcheck="false" placeholder="power name." />
+                     <input name="attr_powerset_3_threat" type="number" placeholder="0" />
+                     <input name="attr_powerset_3_power_description" type="text" spellcheck="true" placeholder="power description" />
                   </div>
                </fieldset>
                <fieldset class="repeating_powerset-3-limits">
-                  <input name="attr_powerset-3-limit" type="text" spellcheck="true" placeholder="limit" />
+                  <input name="attr_powerset_3_limit" type="text" spellcheck="true" placeholder="limit" />
                </fieldset>
             </div>
          </div>
@@ -178,15 +178,15 @@
             <div>
                <h2>Abilities</h2>
                <div>
-                  <input name="attr_abilities-xp" type="radio" value="0" checked />
-                  <input name="attr_abilities-xp" type="radio" value="1" /><span class="as-box"></span>
-                  <input name="attr_abilities-xp" type="radio" value="2" /><span class="as-box"></span>
-                  <input name="attr_abilities-xp" type="radio" value="3" /><span class="as-box"></span>
-                  <input name="attr_abilities-xp" type="radio" value="4" /><span class="as-box"></span>
-                  <input name="attr_abilities-xp" type="radio" value="5" /><span class="as-box"></span>
-                  <input name="attr_abilities-xp" type="radio" value="6" /><span class="as-box"></span>
-                  <input name="attr_abilities-xp" type="radio" value="7" /><span class="as-box"></span>
-                  <input name="attr_abilities-xp" type="radio" value="8" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="0" checked />
+                  <input name="attr_abilities_xp" type="radio" value="1" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="2" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="3" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="4" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="5" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="6" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="7" /><span class="as-box"></span>
+                  <input name="attr_abilities_xp" type="radio" value="8" /><span class="as-box"></span>
                </div>
             </div>
             <fieldset class="repeating_abilities">
@@ -204,52 +204,52 @@
                <div class="attribute">
                   <label>Insight</label>
                   <div>
-                     <input name="attr_insight-xp" type="radio" value="0" checked />
-                     <input name="attr_insight-xp" type="radio" value="1" /><span class="as-box"></span>
-                     <input name="attr_insight-xp" type="radio" value="2" /><span class="as-box"></span>
-                     <input name="attr_insight-xp" type="radio" value="3" /><span class="as-box"></span>
-                     <input name="attr_insight-xp" type="radio" value="4" /><span class="as-box"></span>
-                     <input name="attr_insight-xp" type="radio" value="5" /><span class="as-box"></span>
-                     <input name="attr_insight-xp" type="radio" value="6" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="0" checked />
+                     <input name="attr_insight_xp" type="radio" value="1" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="2" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="3" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="4" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="5" /><span class="as-box"></span>
+                     <input name="attr_insight_xp" type="radio" value="6" /><span class="as-box"></span>
                   </div>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_know-value" type="radio" value="0" checked />
-                     <input name="attr_know-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_know-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_know-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_know-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_know_value" type="radio" value="0" checked />
+                     <input name="attr_know_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_know_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_know_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_know_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Know</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_spy-value" type="radio" value="0" checked />
-                     <input name="attr_spy-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_spy-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_spy-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_spy-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_spy_value" type="radio" value="0" checked />
+                     <input name="attr_spy_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_spy_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_spy_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_spy_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Spy</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_tech-value" type="radio" value="0" checked />
-                     <input name="attr_tech-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_tech-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_tech-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_tech-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_tech_value" type="radio" value="0" checked />
+                     <input name="attr_tech_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_tech_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_tech_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_tech_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Tech</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_trace-value" type="radio" value="0" checked />
-                     <input name="attr_trace-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_trace-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_trace-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_trace-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_trace_value" type="radio" value="0" checked />
+                     <input name="attr_trace_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_trace_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_trace_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_trace_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Trace</label>
                </div>
@@ -258,52 +258,52 @@
                <div class="attribute">
                   <label>Prowess</label>
                   <div>
-                     <input name="attr_prowess-xp" type="radio" value="0" checked />
-                     <input name="attr_prowess-xp" type="radio" value="1" /><span class="as-box"></span>
-                     <input name="attr_prowess-xp" type="radio" value="2" /><span class="as-box"></span>
-                     <input name="attr_prowess-xp" type="radio" value="3" /><span class="as-box"></span>
-                     <input name="attr_prowess-xp" type="radio" value="4" /><span class="as-box"></span>
-                     <input name="attr_prowess-xp" type="radio" value="5" /><span class="as-box"></span>
-                     <input name="attr_prowess-xp" type="radio" value="6" /><span class="as-box"></span>
+                     <input name="attr_prowess_xp" type="radio" value="0" checked />
+                     <input name="attr_prowess_xp" type="radio" value="1" /><span class="as-box"></span>
+                     <input name="attr_prowess_xp" type="radio" value="2" /><span class="as-box"></span>
+                     <input name="attr_prowess_xp" type="radio" value="3" /><span class="as-box"></span>
+                     <input name="attr_prowess_xp" type="radio" value="4" /><span class="as-box"></span>
+                     <input name="attr_prowess_xp" type="radio" value="5" /><span class="as-box"></span>
+                     <input name="attr_prowess_xp" type="radio" value="6" /><span class="as-box"></span>
                   </div>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_acrobatics-value" type="radio" value="0" checked />
-                     <input name="attr_acrobatics-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_acrobatics-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_acrobatics-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_acrobatics-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_acrobatics_value" type="radio" value="0" checked />
+                     <input name="attr_acrobatics_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_acrobatics_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_acrobatics_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_acrobatics_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Acrobatics</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_fight-value" type="radio" value="0" checked />
-                     <input name="attr_fight-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_fight-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_fight-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_fight-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_fight_value" type="radio" value="0" checked />
+                     <input name="attr_fight_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_fight_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_fight_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_fight_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Fight</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_move-value" type="radio" value="0" checked />
-                     <input name="attr_move-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_move-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_move-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_move-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_move_value" type="radio" value="0" checked />
+                     <input name="attr_move_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_move_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_move_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_move_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Move</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_wreck-value" type="radio" value="0" checked />
-                     <input name="attr_wreck-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_wreck-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_wreck-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_wreck-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_wreck_value" type="radio" value="0" checked />
+                     <input name="attr_wreck_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_wreck_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_wreck_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_wreck_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Wreck</label>
                </div>
@@ -312,52 +312,52 @@
                <div class="attribute">
                   <label>Resolve</label>
                   <div>
-                     <input name="attr_resolve-xp" type="radio" value="0" checked />
-                     <input name="attr_resolve-xp" type="radio" value="1" /><span class="as-box"></span>
-                     <input name="attr_resolve-xp" type="radio" value="2" /><span class="as-box"></span>
-                     <input name="attr_resolve-xp" type="radio" value="3" /><span class="as-box"></span>
-                     <input name="attr_resolve-xp" type="radio" value="4" /><span class="as-box"></span>
-                     <input name="attr_resolve-xp" type="radio" value="5" /><span class="as-box"></span>
-                     <input name="attr_resolve-xp" type="radio" value="6" /><span class="as-box"></span>
+                     <input name="attr_resolve_xp" type="radio" value="0" checked />
+                     <input name="attr_resolve_xp" type="radio" value="1" /><span class="as-box"></span>
+                     <input name="attr_resolve_xp" type="radio" value="2" /><span class="as-box"></span>
+                     <input name="attr_resolve_xp" type="radio" value="3" /><span class="as-box"></span>
+                     <input name="attr_resolve_xp" type="radio" value="4" /><span class="as-box"></span>
+                     <input name="attr_resolve_xp" type="radio" value="5" /><span class="as-box"></span>
+                     <input name="attr_resolve_xp" type="radio" value="6" /><span class="as-box"></span>
                   </div>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_inspire-value" type="radio" value="0" checked />
-                     <input name="attr_inspire-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_inspire-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_inspire-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_inspire-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_inspire_value" type="radio" value="0" checked />
+                     <input name="attr_inspire_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_inspire_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_inspire_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_inspire_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Inspire</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_menace-value" type="radio" value="0" checked />
-                     <input name="attr_menace-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_menace-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_menace-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_menace-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_menace_value" type="radio" value="0" checked />
+                     <input name="attr_menace_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_menace_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_menace_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_menace_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Menace</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_socialize-value" type="radio" value="0" checked />
-                     <input name="attr_socialize-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_socialize-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_socialize-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_socialize-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_socialize_value" type="radio" value="0" checked />
+                     <input name="attr_socialize_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_socialize_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_socialize_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_socialize_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Socialize</label>
                </div>
                <div class="action">
                   <div>
-                     <input name="attr_sway-value" type="radio" value="0" checked />
-                     <input name="attr_sway-value" type="radio" value="1" /><span class="as-bullet"></span>
-                     <input name="attr_sway-value" type="radio" value="2" /><span class="as-bullet"></span>
-                     <input name="attr_sway-value" type="radio" value="3" /><span class="as-bullet"></span>
-                     <input name="attr_sway-value" type="radio" value="4" /><span class="as-bullet"></span>
+                     <input name="attr_sway_value" type="radio" value="0" checked />
+                     <input name="attr_sway_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_sway_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_sway_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_sway_value" type="radio" value="4" /><span class="as-bullet"></span>
                   </div>
                   <label>Sway</label>
                </div>
