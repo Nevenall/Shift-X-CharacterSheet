@@ -1,19 +1,12 @@
 @import 'base';
 @import 'fonts';
 
-
-// because we can't use root, this styles the overall char sheet.
-
-
-
 // the required parent of all character sheet styles
 .sheet {
 
-
    &-root {
-
       // we need a root element for our sheet
-      // because this stuff is what is gridding up the char mancer
+      // because charsheet styles interfere with the charactermancer elements
 
       min-width: 860px;
       min-height: 560px;
@@ -27,13 +20,16 @@
 
 
       @extend %branding;
-      font-size: $font-size-body;
+      // Concrete font size because the body is set to 10px in app
+      font-size: 16px;
+      // font-size: $font-size-body;
       line-height: 1.375;
 
       color: $primary-color;
       background-color: $background-color;
 
    }
+
 
    &-character-name {
       width: 100%;
@@ -68,13 +64,13 @@
          width: 100%;
       }
 
-      small {
+      .sheet-small {
          flex: 0;
          overflow: hidden;
          transition: flex .25s ease-in-out;
       }
 
-      input:focus+small {
+      input:focus+.sheet-small {
          height: auto;
          flex: 1;
       }
@@ -126,15 +122,11 @@
          span:first-of-type {
             font-feature-settings: "tnum"on;
             width: 3ch;
-            // width: 5%;
-            // flex-grow: .05;
             text-align: right;
          }
 
          span:last-of-type {
             width: 7ch;
-            // width: 15%;
-            // flex-grow:.15;
          }
       }
    }
@@ -143,6 +135,11 @@
       @extend %flex-row-nowrap;
       align-items: center;
       margin-top: .5em;
+
+      div {
+         @extend %flex-row-nowrap;
+         align-items: center;
+      }
    }
 
 
@@ -176,17 +173,18 @@
       @extend %flex-column-nowrap;
 
 
-      div:first-of-type {
+      div.sheet-powers-header {
          @extend %flex-row-nowrap;
          align-items: center;
+
+         div {
+            @extend %flex-row-nowrap;
+            align-items: center;
+         }
 
          h2 {
             margin: 0;
             flex-grow: 1;
-         }
-
-         div {
-            @extend %flex-row-nowrap;
          }
 
       }
@@ -232,6 +230,10 @@
          @extend %branding;
       }
 
+      div.repitem {
+         @extend %flex-column-nowrap;
+      }
+
       input {
          @extend %border-none;
       }
@@ -250,6 +252,7 @@
       input[type=number],
       input[type=number]::placeholder {
          font-weight: bold;
+         font-feature-settings: "tnum"on;
       }
 
       input:last-of-type {
@@ -261,10 +264,16 @@
 
 
    &-abilities {
-      div:first-of-type {
+
+      div.sheet-abilities-header {
          @extend %flex-row-nowrap;
          align-items: center;
          margin-top: 1.5em;
+
+         div {
+            @extend %flex-row-nowrap;
+            align-items: center;
+         }
 
          h2 {
             margin: 0;
@@ -378,13 +387,13 @@
       background-size: 1em;
    }
 
+   &-small {
+      @extend %font-small;
+   }
 
 }
 
 
-small {
-   @extend %font-small;
-}
 
 :focus {
    outline: none;
