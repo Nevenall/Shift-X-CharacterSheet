@@ -16,5 +16,12 @@ It would be nice to be able to simplify the creation of the html. I guess Pug is
 
 
 todo - svg assets so we can better control their style, can do cool stuff
+
 todo - need a class for radio groups so we can do the flexbox display
-todo - add informational footer with dice roller and xp 
+
+todo - once there is radiogroup class we can add some universal margins around all but them.
+
+todo - add informational footer with dice roller and xp triggers
+
+todo - change character name to a label populated so we can better lay it out with the concept. 
+
