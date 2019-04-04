@@ -17,8 +17,4 @@ It would be nice to be able to simplify the creation of the html. I guess Pug is
 
 todo - svg assets so we can better control their style, can do cool stuff
 todo - need a class for radio groups so we can do the flexbox display
-todo - need value radio groups for the attributes
-todo - split character name into name and a concept box
 todo - add informational footer with dice roller and xp 
-todo - be nice of the power description was a text area that wrapped so we could read it all.
-todo - the powerset description seems to get pretty big, can we tone that down?

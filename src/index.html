@@ -10,7 +10,11 @@
 
 <body>
    <div class="root">
-      <input name="attr_character_name" class="character-name" spellcheck="false" type="text" placeholder="Hero Name" />
+      <div class="header">
+         <input name="attr_character_name" class="character-name" spellcheck="false" type="text" placeholder="Hero Name" />
+         <input name="attr_character_concept" class="character-concept" type="text" placeholder="Hero concept" />
+      </div>
+
       <div class="left-column">
          <div class="hero-details">
             <div>
@@ -136,14 +140,12 @@
                <textarea name="attr_powerset_1_description" placeholder="a narrative description"></textarea>
                <fieldset class="repeating_powerset-1-powers">
                   <div class="power">
-                     <input name="attr_powerset_1_power_name" type="text" spellcheck="false" placeholder="power name." />
-                     <input name="attr_powerset_1_threat" type="number" placeholder="0" />
-                     <input name="attr_powerset_1_power_description" type="text" spellcheck="true" placeholder="power description" />
+                     <input name="attr_powerset1powername" type="text" spellcheck="false" placeholder="power name." />
+                     <input name="attr_powerset1threat" type="number" placeholder="0" />
+                     <textarea name="attr_powerset1powerdescription" spellcheck="true" placeholder="power description"></textarea>
                   </div>
                </fieldset>
-               <fieldset class="repeating_powerset-1-limits">
-                  <input name="attr_powerset_1_limit" type="text" spellcheck="true" placeholder="limit" />
-               </fieldset>
+               <textarea name="attr_powerset_1_limits" spellcheck="true" placeholder="limits"></textarea>
             </div>
             <div class="powerset">
                <input name="attr_powerset_2_name" spellcheck="false" type="text" placeholder="Powerset Two" />
@@ -152,12 +154,11 @@
                   <div class="power">
                      <input name="attr_powerset_2_power_name" type="text" spellcheck="false" placeholder="power name." />
                      <input name="attr_powerset_2_threat" type="number" placeholder="0" />
-                     <input name="attr_powerset_2_power_description" type="text" spellcheck="true" placeholder="power description" />
+                     <textarea name="attr_powerset_2_power_description" spellcheck="true" placeholder="power description"></textarea>
                   </div>
                </fieldset>
-               <fieldset class="repeating_powerset-2-limits">
-                  <input name="attr_powerset_2_limit" type="text" spellcheck="true" placeholder="limit" />
-               </fieldset>
+               <textarea name="attr_powerset_2_limits" spellcheck="true" placeholder="limits"></textarea>
+
             </div>
             <div class="powerset">
                <input name="attr_powerset_3_name" spellcheck="false" type="text" placeholder="Powerset Three" />
@@ -166,12 +167,11 @@
                   <div class="power">
                      <input name="attr_powerset_3_power_name" type="text" spellcheck="false" placeholder="power name." />
                      <input name="attr_powerset_3_threat" type="number" placeholder="0" />
-                     <input name="attr_powerset_3_power_description" type="text" spellcheck="true" placeholder="power description" />
+                     <textarea name="attr_powerset_3_power_description" spellcheck="true" placeholder="power description"></textarea>
                   </div>
                </fieldset>
-               <fieldset class="repeating_powerset-3-limits">
-                  <input name="attr_powerset_3_limit" type="text" spellcheck="true" placeholder="limit" />
-               </fieldset>
+               <textarea name="attr_powerset_3_limits" spellcheck="true" placeholder="limits"></textarea>
+
             </div>
          </div>
          <div class="abilities">
@@ -203,6 +203,13 @@
             <div class="attribute-group">
                <div class="attribute">
                   <label>Insight</label>
+                  <div>
+                     <input name="attr_insight_value" type="radio" value="0" checked />
+                     <input name="attr_insight_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_insight_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_insight_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_insight_value" type="radio" value="4" /><span class="as-bullet"></span>
+                  </div>
                   <div>
                      <input name="attr_insight_xp" type="radio" value="0" checked />
                      <input name="attr_insight_xp" type="radio" value="1" /><span class="as-box"></span>
@@ -258,6 +265,13 @@
                <div class="attribute">
                   <label>Prowess</label>
                   <div>
+                     <input name="attr_prowess_value" type="radio" value="0" checked />
+                     <input name="attr_prowess_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_prowess_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_prowess_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_prowess_value" type="radio" value="4" /><span class="as-bullet"></span>
+                  </div>
+                  <div>
                      <input name="attr_prowess_xp" type="radio" value="0" checked />
                      <input name="attr_prowess_xp" type="radio" value="1" /><span class="as-box"></span>
                      <input name="attr_prowess_xp" type="radio" value="2" /><span class="as-box"></span>
@@ -311,6 +325,13 @@
             <div class="attribute-group">
                <div class="attribute">
                   <label>Resolve</label>
+                  <div>
+                     <input name="attr_resolve_value" type="radio" value="0" checked />
+                     <input name="attr_resolve_value" type="radio" value="1" /><span class="as-bullet"></span>
+                     <input name="attr_resolve_value" type="radio" value="2" /><span class="as-bullet"></span>
+                     <input name="attr_resolve_value" type="radio" value="3" /><span class="as-bullet"></span>
+                     <input name="attr_resolve_value" type="radio" value="4" /><span class="as-bullet"></span>
+                  </div>
                   <div>
                      <input name="attr_resolve_xp" type="radio" value="0" checked />
                      <input name="attr_resolve_xp" type="radio" value="1" /><span class="as-box"></span>

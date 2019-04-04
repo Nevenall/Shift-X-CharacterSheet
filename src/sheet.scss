@@ -30,14 +30,30 @@
 
    }
 
+   &-header {
+      @extend %flex-row-nowrap;
+      align-items: center;
+      grid-area: header;
+   }
 
    &-character-name {
-      width: 100%;
+      width: 33%;
       @extend %bigtime;
       font-size: $font-size-h1;
       color: $secondary-color;
       border: none;
-      grid-area: header;
+   }
+
+   &-character-concept {
+      flex-grow: 1;
+      @extend %branding;
+      font-size: $font-size-h3;
+      color: $primary-color;
+      border: none;
+   }
+
+   &-character-concept::placeholder {
+      @extend %branding;
    }
 
    &-left-column {
@@ -202,6 +218,7 @@
 
       &>textarea {
          width: 100%;
+         height: 5em;
          @extend %border-none;
       }
 
@@ -209,13 +226,14 @@
          @extend %branding;
       }
 
-      input[name$=limit] {
+      textarea[name$=limits] {
          @extend %branding;
          @extend %border-none;
          width: 100%;
+         height: 3em;
       }
 
-      input[name$=limit]::placeholder {
+      textarea[name$=limits]::placeholder {
          @extend %branding;
       }
 
@@ -255,9 +273,11 @@
          font-feature-settings: "tnum"on;
       }
 
-      input:last-of-type {
+      textarea {
          // power description
+         @extend %border-none;
          width: 50%;
+         height: 2em;
          flex-grow: 2;
       }
    }
@@ -327,6 +347,10 @@
          @extend %bigtime;
          color: $secondary-color;
          font-size: $font-size-h3;
+         flex-grow: 1;
+      }
+
+      div:first-of-type {
          flex-grow: 1;
       }
 
