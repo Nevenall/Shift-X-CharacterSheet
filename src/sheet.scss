@@ -17,7 +17,7 @@
       grid-template-areas: "header header header"
          "left middle right"
          "footer footer footer";
-
+      grid-gap: 1em;
 
       @extend %branding;
       // Concrete font size because the body is set to 10px in app
