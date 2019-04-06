@@ -37,19 +37,18 @@
    }
 
    &-character-name {
-      width: 33%;
       @extend %bigtime;
       font-size: $font-size-h1;
       color: $secondary-color;
-      border: none;
+      margin-right: 1em;
    }
 
    &-character-concept {
-      flex-grow: 1;
       @extend %branding;
       font-size: $font-size-h3;
       color: $primary-color;
       border: none;
+      flex-grow: 1;
    }
 
    &-character-concept::placeholder {
