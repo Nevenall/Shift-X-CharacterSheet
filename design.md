@@ -21,3 +21,4 @@ todo - add informational footer with dice roller and xp triggers
 
 todo - add a villain and NPC version of the character sheet. Maybe as a tab like the bitd sheet does.
 
+todo - add origin to each powerset instead of character? 

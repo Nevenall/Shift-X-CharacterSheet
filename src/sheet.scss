@@ -21,7 +21,7 @@
 
       @extend %branding;
       // Concrete font size because the body is set to 10px in app
-      font-size: 16px;
+      font-size: 14px;
       // font-size: $font-size-body;
       line-height: 1.375;
 
@@ -172,8 +172,12 @@
          flex-grow: 1;
          @extend %border-none;
          @extend %bigtime;
-         color: $secondary-color;
+         color: $primary-color;
          font-size: $font-size-h3;
+      }
+
+      ::placeholder {
+         color: $primary-color;
       }
 
 
@@ -187,6 +191,10 @@
    &-powersets {
       @extend %flex-column-nowrap;
 
+      border: 2px solid $secondary-color;
+      border-radius: .5em;
+      padding:1em;
+      padding-top: 0;
 
       div.sheet-powers-header {
          @extend %flex-row-nowrap;
@@ -209,7 +217,7 @@
    &-powerset {
       &>input[type=text] {
          @extend %bigtime;
-         color: $secondary-color;
+         color: $primary-color;
          font-size: $font-size-h3;
          @extend %border-none;
          width: 100%;
@@ -234,6 +242,25 @@
 
       textarea[name$=limits]::placeholder {
          @extend %branding;
+      }
+
+   }
+
+
+   &-powerset-name {
+      @extend %flex-row-nowrap;
+      align-items: center;
+
+      div {
+         @extend %flex-row-nowrap;
+         align-items: center;
+      }
+
+      input {
+         flex-grow: 1;
+         @extend %border-none;
+         font-size: $font-size-h3;
+         @extend %bigtime;
       }
 
    }
@@ -387,6 +414,16 @@
       }
    }
 
+   &-clocks {
+      textarea {
+         @extend %border-none;
+         width: 100%;
+      }
+
+      ::placeholder {
+         @extend %branding;
+      }
+   }
 
 
 
