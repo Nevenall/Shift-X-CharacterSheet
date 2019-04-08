@@ -193,7 +193,7 @@
 
       border: 2px solid $secondary-color;
       border-radius: .5em;
-      padding:1em;
+      padding: 1em;
       padding-top: 0;
 
       div.sheet-powers-header {
@@ -261,6 +261,7 @@
          @extend %border-none;
          font-size: $font-size-h3;
          @extend %bigtime;
+         color: $primary-color;
       }
 
    }
