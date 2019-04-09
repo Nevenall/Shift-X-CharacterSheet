@@ -404,6 +404,23 @@
                </div>
             </div>
          </div>
+         <div class="dice-rolls">
+            <label>Roll</label>
+            <!-- &{template:default} {{name=@{character_name}}} {{result=[[3d6mkh1sd]]}} 
+            seems like we can use "dice" in a roll template to see what we roll. but 
+            I don't know if we can show crits very easily. 
+            because we have to pick 1 die.
+            -->
+            <button type="roll" value="/roll 2d6kl1s">0d</button>
+            <button type="roll" value="/roll 1d6mkh1sd">1d</button>
+            <button type="roll" value="/roll 2d6mkh1sd">2d</button>
+            <button type="roll" value="/roll 3d6mkh1sd">3d</button>
+            <button type="roll" value="/roll 4d6mkh1sd">4d</button>
+            <button type="roll" value="/roll 5d6mkh1sd">5d</button>
+            <button type="roll" value="/roll 6d6mkh1sd">6d</button>
+            <button type="roll" value="/roll 7d6mkh1sd">7d</button>
+            <button type="roll" value="/roll 8d6mkh1sd">8d</button>
+         </div>
          <div class="gear">
             <h2>Gear</h2>
             <textarea name="attr_gear" placeholder="gear and stuff"></textarea>
@@ -415,18 +432,7 @@
          </div>
       </div>
       <div class="footer">
-         <div class="dice-rolls">
-            <!-- for dice rolling -->
-            <button type="roll" value="/roll 2d6">⓿</button>
-            <button type="roll" value="/roll 1d6">❶</button>
-            <button type="roll" value="/roll 2d6">❷</button>
-            <button type="roll" value="/roll 3d6">❸</button>
-            <button type="roll" value="/roll 4d6">❹</button>
-            <button type="roll" value="/roll 5d6">❺</button>
-            <button type="roll" value="/roll 6d6">❻</button>
-            <button type="roll" value="/roll 7d6">❼</button>
-            <button type="roll" value="/roll 8d6">❽</button>
-         </div>
+
          <div class="xp-triggers">
             <!-- for xp -->
 

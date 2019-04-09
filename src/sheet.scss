@@ -435,6 +435,23 @@
 
    }
 
+   &-dice-rolls {
+      @extend %flex-row-wrap;
+      align-items: baseline;
+      margin-top:1em;
+      
+      label{margin-right:1em;}
+      button {
+         color: white;
+         background: $primary-color;
+         // border-radius: 1em;
+
+         @extend %branding;
+         font-feature-settings: "tnum"on;
+
+      }
+   }
+
 
    &-as-box {
       background: base('assets/box-checked.png') left center no-repeat;
