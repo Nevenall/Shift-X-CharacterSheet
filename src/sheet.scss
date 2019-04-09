@@ -427,6 +427,13 @@
       }
    }
 
+   &-footer {
+      grid-area: footer;
+      @extend %flex-row-nowrap;
+      justify-content: center;
+      align-items: baseline;
+
+   }
 
 
    &-as-box {
