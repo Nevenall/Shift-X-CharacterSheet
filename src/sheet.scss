@@ -438,9 +438,12 @@
    &-dice-rolls {
       @extend %flex-row-wrap;
       align-items: baseline;
-      margin-top:1em;
-      
-      label{margin-right:1em;}
+      margin-top: 1em;
+
+      label {
+         margin-right: 1em;
+      }
+
       button {
          color: white;
          background: $primary-color;
@@ -477,7 +480,19 @@
       @extend %font-small;
    }
 
+
+   &-rolltemplate-shift-x {
+
+      // span.inlinerollresult::before {
+      //    content: attr(title);
+      //    margin: auto;
+      //    text-align: center;
+      // }
+
+   }
+
 }
+
 
 
 
