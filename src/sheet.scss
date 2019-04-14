@@ -482,12 +482,32 @@
 
 
    &-rolltemplate-shift-x {
+      @extend %flex-column-nowrap;
+      align-items: stretch;
+      justify-content: center;
 
-      // span.inlinerollresult::before {
-      //    content: attr(title);
-      //    margin: auto;
-      //    text-align: center;
-      // }
+      border: 2px solid $secondary-color;
+      border-radius: .5em;
+
+      h3 {
+         @extend %branding;
+         color: $secondary-color;
+         margin: auto;
+         text-align: center;
+      }
+
+      div {
+         @extend %branding;
+         font-size: $font-size-h4;
+         margin: auto;
+         text-align: center;
+         margin-top: .5em;
+         margin-bottom: .5em;
+      }
+
+      div:last-of-type {
+         font-size: $font-size-h5;
+      }
 
    }
 
