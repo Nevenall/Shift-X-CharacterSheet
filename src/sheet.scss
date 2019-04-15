@@ -1,5 +1,6 @@
-@import 'base';
+@import 'variables';
 @import 'fonts';
+@import './base.scss';
 
 // the required parent of all character sheet styles
 .sheet {
@@ -84,7 +85,7 @@
          overflow: hidden;
          transition: flex .25s ease-in-out;
       }
-
+   
       input:focus+.sheet-small {
          height: auto;
          flex: 1;
@@ -97,6 +98,8 @@
       }
 
    }
+
+ 
 
    &-consequences {}
 
@@ -482,6 +485,7 @@
 
 
    &-rolltemplate-shift-x {
+      visibility: hidden;
       @extend %flex-column-nowrap;
       align-items: stretch;
       justify-content: center;
@@ -513,211 +517,4 @@
 
 }
 
-
-
-
-:focus {
-   outline: none;
-}
-
-input {
-   font-size: $font-size-body;
-}
-
-::placeholder {
-   @extend %bigtime;
-}
-
-input[type=radio],
-input[type=checkbox] {
-   opacity: 0;
-   width: 1em;
-   height: 1em;
-   position: relative;
-   padding: 0;
-   margin: 0;
-   margin-right: -1em;
-   cursor: pointer;
-   z-index: 1;
-}
-
-// when 0 is not selected, move to top so we can unselect all
-input[type=radio][value="0"]:not(:checked) {
-   z-index: 9;
-}
-
-
-input[type=radio]+.sheet-as-bullet {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   // "on" state is default 
-   opacity: 1;
-}
-
-input[type=radio]:checked~input[type=radio]+.sheet-as-bullet {
-   // "off" state turns on after checked to end
-   opacity: .25;
-}
-
-
-input[type=radio]+.sheet-as-box {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   margin-right: 2px;
-   // "on" state is the default
-   background: base('assets/box-checked.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=radio]:checked~input[type=radio]+.sheet-as-box {
-   // "off" state is active for consecutive radios after checked
-   background: base('assets/box-empty.png') left center no-repeat;
-   background-size: 1em;
-}
-
-
-input[type=radio]+.sheet-as-triangle-up {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   margin-right: 2px;
-   // "on" state is the default
-   background: base('assets/triangle-up-checked.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=radio]:checked~input[type=radio]+.sheet-as-triangle-up {
-   // "off" state is active for consecutive radios after checked
-   background: base('assets/triangle-up-empty.png') left center no-repeat;
-   background-size: 1em;
-}
-
-
-input[type=radio]+.sheet-as-triangle-down {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   margin-right: 2px;
-   // "on" state is the default
-   background: base('assets/triangle-down-checked.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=radio]:checked~input[type=radio]+.sheet-as-triangle-down {
-   // "off" state is active for consecutive radios after checked
-   background: base('assets/triangle-down-empty.png') left center no-repeat;
-   background-size: 1em;
-}
-
-
-input[type=checkbox]+.sheet-as-diamond {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   background: base('assets/diamond-empty.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=checkbox]:checked+.sheet-as-diamond {
-   background: base('assets/diamond-checked.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=checkbox]+.sheet-as-triangle-down {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   background: base('assets/triangle-down-empty.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=checkbox]:checked+.sheet-as-triangle-down {
-   background: base('assets/triangle-down-checked.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=checkbox]+.sheet-as-triangle-up {
-   display: inline-block;
-   width: 1em;
-   height: 1em;
-   background: base('assets/triangle-up-empty.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=checkbox]:checked+.sheet-as-triangle-up {
-   background: base('assets/triangle-up-checked.png') left center no-repeat;
-   background-size: 1em;
-}
-
-input[type=number] {
-   text-align: center;
-   width: 1.5em;
-   -moz-appearance: textfield;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-   margin: 0;
-}
-
-label {
-   @extend %bigtime;
-   font-size: $font-size-h4;
-   color: $secondary-color;
-   font-weight: normal;
-}
-
-p {
-   // line-height: 1.45;
-}
-
-input {
-   @extend %branding;
-   @extend %border-bottom;
-   width: auto;
-}
-
-textarea {
-   @extend %branding;
-   @extend %border-bottom;
-   font-size: $font-size-h6;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   @extend %bigtime;
-   color: $secondary-color;
-}
-
-h1 {
-   font-size: $font-size-h1;
-}
-
-h2 {
-   font-size: $font-size-h2;
-}
-
-h3 {
-   font-size: $font-size-h3;
-}
-
-h4 {
-   font-size: $font-size-h4;
-}
-
-h5 {
-   font-size: $font-size-h5;
-}
-
-h6 {
-   font-size: $font-size-h6;
-}
+@import './print.scss';

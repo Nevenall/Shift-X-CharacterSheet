@@ -1,0 +1,22 @@
+@media print {
+
+   .sheet {
+      &-dice-rolls {
+         display: none;
+      }
+
+
+      &-hero-details {
+         .sheet-small {
+            height: auto;
+            flex: 1;
+         }
+      }
+
+
+   }
+
+   ::placeholder {
+      visibility: hidden;
+   }
+}
