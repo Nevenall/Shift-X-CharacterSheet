@@ -17,15 +17,11 @@ It would be nice to be able to simplify the creation of the html. I guess Pug is
 
 todo - svg assets so we can better control their style, can do cool stuff
 
-todo - add informational footer with dice roller and xp triggers
+todo - add informational footer xp triggers
 
 todo - add a villain and NPC version of the character sheet. Maybe as a tab like the bitd sheet does.
 
-todo - add origin to each powerset instead of character? can take of that with the discreption. 
-
 todo - can we use sheet worker to dynamically add powersets?
-
-todo - a print css 
 
 todo - height of abilities textbox description
 
