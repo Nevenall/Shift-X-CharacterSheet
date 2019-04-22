@@ -68,6 +68,11 @@ function clean(callback) {
    return del('dist/**', callback)
 }
 
+function headers() {
+   return src('src/_headers')
+      .pipe(dest('dist/'))
+}
+
 
 function watchSource(cb) {
    sync.init({
@@ -79,7 +84,7 @@ function watchSource(cb) {
    cb()
 }
 
-const build = series(clean, html, css, javascript, fonts, assets)
+const build = series(clean, html, css, javascript, fonts, assets, headers)
 const rebuild = series(html, css)
 
 exports.build = series(asDevelopment, build)
